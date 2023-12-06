@@ -6,16 +6,23 @@
   box-sizing: border-box;
 }
 
-/*commun*/
-
+/*************COMMUNS*************/
+/*éléments communs*/
+html {
+  scroll-behavior: smooth;
+}
 
 h1{
   margin: 2rem;
 text-align: center;
 font-size: 3rem;
 }
-  
 
+ul {
+  list-style: none inside none;
+}
+
+/*structure*/
 .row {
   display: flex;
   flex-direction: row; 
@@ -26,12 +33,28 @@ font-size: 3rem;
   justify-content: space-around;
 }
 
-
 .space {
   justify-content: space-between;
 }
 
-/*formulaire*/
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/*menu*/
+
+
+
+
+
+/*footer*/
+
+
+/*************PAGE RECHERCHE FORMULAIRE*************/
 
 .form {
 max-width: 75%;
@@ -79,3 +102,5 @@ padding-right: 2rem;
   background-color:goldenrod;
 
 }
+
+/*************PAGE INSCRIPTION*************/
