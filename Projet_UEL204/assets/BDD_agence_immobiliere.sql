@@ -43,6 +43,9 @@ INSERT INTO `clients` (`id`, `identifiant`, `motdepasse`) VALUES
 (3, 'jackie458', 'motdepasse', 'jackie458@mail.fr'),
 (4, 'mickeline', 'micke', 'maickeline87@yahoo.fr'),
 (5, 'josette28', 'lenomdemonchat', 'josette28@gmail.com');
+(6, 'Manudu95', '1234', 'manudu95@gmail.com');
+(7, 'Kyzywyx', 'tokiohotel4ever', 'kyzywyx@hotmail.fr');
+(8, 'CrazyFrog', 'bebebebep', 'crazyfrog@gmail.com');
 
 
 -- --------------------------------------------------------
@@ -81,6 +84,14 @@ INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VAL
 (13, '75 rue du Général du Cray, 87000 Limoges', 'Limoges', 'maison', 125, 375000 );
 (14,'6 rue Elsa Triolet, 87000 Limoges', 'Limoges', 'maison', 112, 302000);
 (15, '7 rue André Fourcade, 87000 Limoges', 'Limoges', 'maison', 165, 420000);
+(16, '13 Rue Jean Jaurès, 87920 Condat-sur-Vienne','Condat-sur-Vienne', 'appartement', 63, 110000);
+(17, '2 Rue Alexandre Dumas, 87920 Condat-sur-Vienne','Condat-sur-Vienne','maison', 145, 160000);
+(18, '18 Rue Wagner, 87920 Condat-sur-Vienne','Condat-sur-Vienne','maison',220, 310000);
+(19, '1 Rue du Moulin Neuf, 87920 Condat-sur-Vienne','Condat-sur-Vienne','appartement', 75, 200000);
+(20, '16 Chem. de la Vigne, 87110 Le Vigen','Le Vigen','maison', 170, 230000);
+(21, '8 Imp. Joseph Mazabraud, 87110 Le Vigen', 'Le Vigen', 'appartement', 85, 180000);
+(22, '4 Imp. Joseph Mazabraud, 87110 Le Vigen','Le Vigen', 'maison', 135, 160000);
+(23, '3 Rue 19 Mars 1962, 87110 Le Vigen', 'Le Vigen', 'appartement', 65, 80000);
 --
 -- Indexes for dumped tables
 --
