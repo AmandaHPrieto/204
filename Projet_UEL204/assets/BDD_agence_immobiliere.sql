@@ -37,15 +37,21 @@ CREATE TABLE `clients` (
 -- Dumping data for table `clients`
 --
 
+
 INSERT INTO `clients` (`id`, `identifiant`, `motdepasse`, `mail`) VALUES
+
 (1, 'Administrateur', '83CCutv8', 'admin@airphp.com'),
 (2, 'Paulo87', 'paulo', 'paulo87@gmail.com'),
 (3, 'jackie458', 'motdepasse', 'jackie458@mail.fr'),
 (4, 'mickeline', 'micke', 'maickeline87@yahoo.fr'),
 (5, 'josette28', 'lenomdemonchat', 'josette28@gmail.com'),
-(6, 'Manudu95', '1234', 'manudu95@gmail.com'),
-(7, 'Kyzywyx', 'tokiohotel4ever', 'kyzywyx@hotmail.fr'),
-(8, 'CrazyFrog', 'bebebebep', 'crazyfrog@gmail.com');
+(6, 'dédé87350', 'fazer600', 'dede.lejeune@hotmail.fr'),
+(7, 'GerardM', 'chantal1971', 'gerard.menvussaa@hotmail.com'),
+(8, 'celine23', 'coquelicot2012', 'celine20@gmail.com'),
+(9, 'Michael Jaquesson', 'mobidick31', 'michael.j@yahoo.fr'),
+(10, 'Manudu95', '1234', 'manudu95@gmail.com'),
+(11, 'Kyzywyx', 'tokiohotel4ever', 'kyzywyx@hotmail.fr'),
+(12, 'CrazyFrog', 'bebebebep', 'crazyfrog@gmail.com'),
 
 
 -- --------------------------------------------------------
