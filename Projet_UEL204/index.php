@@ -13,7 +13,7 @@
 
 
 	<div class="form">
-		<form method="POST" action="#">
+		<form method="POST" action="pages/resultats.php">
 			<fieldset>
 		 	 	<legend>Que recherchez vous?</legend>
 			<div class="form-box">
