@@ -29,7 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `clients` (
   `id` int(11) NOT NULL,
   `identifiant` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `motdepasse` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `motdepasse` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `mail` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -37,7 +38,8 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `identifiant`, `motdepasse`) VALUES
-(1, 'Administrateur', '83CCutv8');
+(1, 'Administrateur', '83CCutv8', 'admin@airphp.com'),
+(2, 'Paulo87', 'paulo', 'paulo87@gmail.com');
 
 -- --------------------------------------------------------
 
