@@ -82,7 +82,7 @@ INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VAL
 (6, '8, rue de la Garenne, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 125, 260000),
 (7, '14 rue de Bellevue, 87270 Couzeix', 'Couzeix', 'appartement', 45, 85000),
 (8, '16 allée des troubadours, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 180, 320000);
-(9, '12 aveneue Jean Zay, 87350 Panazol', 'Panazol','appartement', 50, 92000);
+(9, '12 avenue Jean Zay, 87350 Panazol', 'Panazol','appartement', 50, 92000);
 (10, '4 rue Albert Calmette, 87350 Panazol', 'Panazol', 'maison', 89, );
 (11, '8 rue Paul Bert, 87350 Panazol', 'Panazol', 'maison', 135, 299000);
 (12, '22 rue François Perrin, 87350 Panazol', 'Panazol', 'appartement', 90, 255000);
@@ -98,7 +98,13 @@ INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VAL
 (21, '8 Imp. Joseph Mazabraud, 87110 Le Vigen', 'Le Vigen', 'appartement', 85, 180000);
 (22, '4 Imp. Joseph Mazabraud, 87110 Le Vigen','Le Vigen', 'maison', 135, 160000);
 (23, '3 Rue 19 Mars 1962, 87110 Le Vigen', 'Le Vigen', 'appartement', 65, 80000);
---
+(24, '30 avenue de la Libération, 87125 Rilhac-Rancon', 'Rilhac-Rancon', 'maison', 130, 223800);
+(25, '10 rue Jules Michelet, 87125 Rilhac-Rancon', 'Rilhac-Rancon', 'maison', 155, 296800);
+(26, '6 route de Toulouse, 87220 Boisseuil', 'Boisseuil', 'maison', 90, 184000);
+(27, '2 route de Crouzy, 87220 Boisseuil', 'Boisseuil', 'maison', 60, 98000);
+(24, '10 route du buisson, 87220 Boisseuil', 'Boisseuil', 'maison', 164, 388500);
+
+
 -- Indexes for dumped tables
 --
 
