@@ -44,6 +44,7 @@ INSERT INTO `clients` (`id`, `identifiant`, `motdepasse`) VALUES
 (4, 'mickeline', 'micke', 'maickeline87@yahoo.fr'),
 (5, 'josette28', 'lenomdemonchat', 'josette28@gmail.com');
 
+
 -- --------------------------------------------------------
 
 --
@@ -66,13 +67,20 @@ CREATE TABLE `logements` (
 INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VALUES
 (1, '12 avenue Albert Thomas, 87000 Limoges', 'Limoges', 'appartement', 67, 175000),
 (2, '3 avenue de Landouge, 87100 Limoges', 'Limoges', 'maison', 137, 230000),
-(3, "7 rue d'Alsace, 87220 Feytiat", 'Feytiat', 'appartement', 48, 90000),
+(3, '7 rue d` Alsace, 87220 Feytiat', 'Feytiat', 'appartement', 48, 90000),
 (4, '47 avenue du Limousin, 87220 Feytiat', 'Feytiat', 'maison', 98, 182000),
 (5, '31 rue de la Garde, 87270 Couzeix', 'Couzeix', 'maison', 75, 190000),
 (6, '8, rue de la Garenne, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 125, 260000),
 (7, '14 rue de Bellevue, 87270 Couzeix', 'Couzeix', 'appartement', 45, 85000),
 (8, '16 allée des troubadours, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 180, 320000);
-
+(, '12 aveneue Jean Zay, 87350 Panazol', 'Panazol','appartement', 50, 92000);
+(, '4 rue Albert Calmette, 87350 Panazol', 'Panazol', 'maison', 89, );
+(, '8 rue Paul Bert, 87350 Panazol', 'Panazol', 'maison', 135, 299000);
+(, '22 rue François Perrin, 87350 Panazol', 'Panazol', 'appartement', 90, 255000);
+(, '67 boulevard de la Corderie, 87000 Limoges', 'Limoges','appartement', 110, 400000);
+(, '75 rue du Général du Cray, 87000 Limoges', 'Limoges', 'maison', 125, 375000 );
+(,'6 rue Elsa Triolet, 87000 Limoges', 'Limoges', 'maison', 112, 302000);
+(, '7 rue André Fourcade, 87000 Limoges', 'Limoges', 'maison', 165, 420000);
 --
 -- Indexes for dumped tables
 --
