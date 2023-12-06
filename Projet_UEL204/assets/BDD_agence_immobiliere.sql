@@ -102,7 +102,7 @@ INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VAL
 (25, '10 rue Jules Michelet, 87125 Rilhac-Rancon', 'Rilhac-Rancon', 'maison', 155, 296800);
 (26, '6 route de Toulouse, 87220 Boisseuil', 'Boisseuil', 'maison', 90, 184000);
 (27, '2 route de Crouzy, 87220 Boisseuil', 'Boisseuil', 'maison', 60, 98000);
-(24, '10 route du buisson, 87220 Boisseuil', 'Boisseuil', 'maison', 164, 388500);
+(28, '10 route du buisson, 87220 Boisseuil', 'Boisseuil', 'maison', 164, 388500);
 
 
 -- Indexes for dumped tables
