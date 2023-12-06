@@ -73,14 +73,14 @@ INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VAL
 (6, '8, rue de la Garenne, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 125, 260000),
 (7, '14 rue de Bellevue, 87270 Couzeix', 'Couzeix', 'appartement', 45, 85000),
 (8, '16 allée des troubadours, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 180, 320000);
-(, '12 aveneue Jean Zay, 87350 Panazol', 'Panazol','appartement', 50, 92000);
-(, '4 rue Albert Calmette, 87350 Panazol', 'Panazol', 'maison', 89, );
-(, '8 rue Paul Bert, 87350 Panazol', 'Panazol', 'maison', 135, 299000);
-(, '22 rue François Perrin, 87350 Panazol', 'Panazol', 'appartement', 90, 255000);
-(, '67 boulevard de la Corderie, 87000 Limoges', 'Limoges','appartement', 110, 400000);
-(, '75 rue du Général du Cray, 87000 Limoges', 'Limoges', 'maison', 125, 375000 );
-(,'6 rue Elsa Triolet, 87000 Limoges', 'Limoges', 'maison', 112, 302000);
-(, '7 rue André Fourcade, 87000 Limoges', 'Limoges', 'maison', 165, 420000);
+(9, '12 aveneue Jean Zay, 87350 Panazol', 'Panazol','appartement', 50, 92000);
+(10, '4 rue Albert Calmette, 87350 Panazol', 'Panazol', 'maison', 89, );
+(11, '8 rue Paul Bert, 87350 Panazol', 'Panazol', 'maison', 135, 299000);
+(12, '22 rue François Perrin, 87350 Panazol', 'Panazol', 'appartement', 90, 255000);
+(12, '67 boulevard de la Corderie, 87000 Limoges', 'Limoges','appartement', 110, 400000);
+(13, '75 rue du Général du Cray, 87000 Limoges', 'Limoges', 'maison', 125, 375000 );
+(14,'6 rue Elsa Triolet, 87000 Limoges', 'Limoges', 'maison', 112, 302000);
+(15, '7 rue André Fourcade, 87000 Limoges', 'Limoges', 'maison', 165, 420000);
 --
 -- Indexes for dumped tables
 --
