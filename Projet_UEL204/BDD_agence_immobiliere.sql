@@ -39,7 +39,10 @@ CREATE TABLE `clients` (
 
 INSERT INTO `clients` (`id`, `identifiant`, `motdepasse`) VALUES
 (1, 'Administrateur', '83CCutv8', 'admin@airphp.com'),
-(2, 'Paulo87', 'paulo', 'paulo87@gmail.com');
+(2, 'Paulo87', 'paulo', 'paulo87@gmail.com'),
+(3, 'jackie458', 'motdepasse', 'jackie458@mail.fr'),
+(4, 'mickeline', 'micke', 'maickeline87@yahoo.fr'),
+(5, 'josette28', 'lenomdemonchat', 'josette28@gmail.com');
 
 -- --------------------------------------------------------
 
