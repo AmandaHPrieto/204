@@ -83,28 +83,26 @@ INSERT INTO `logements` (`id`, `adresse`, `ville`, `type`, `surface`,`prix`) VAL
 (7, '14 rue de Bellevue, 87270 Couzeix', 'Couzeix', 'appartement', 45, 85000),
 (8, '16 allée des troubadours, 87430 Verneuil-sur-Vienne', 'Verneuil-sur-Vienne', 'maison', 180, 320000),
 (9, '12 avenue Jean Zay, 87350 Panazol', 'Panazol','appartement', 50, 92000),
-(10, '4 rue Albert Calmette, 87350 Panazol', 'Panazol', 'maison', 89, 180000),
+(10, '4 rue Albert Calmette, 87350 Panazol', 'Panazol', 'maison', 89, 80000),
 (11, '8 rue Paul Bert, 87350 Panazol', 'Panazol', 'maison', 135, 299000),
 (12, '22 rue François Perrin, 87350 Panazol', 'Panazol', 'appartement', 90, 255000),
-(13, '75 rue du Général du Cray, 87000 Limoges', 'Limoges', 'maison', 125, 375000),
-(14,'6 rue Elsa Triolet, 87000 Limoges', 'Limoges', 'maison', 112, 302000),
-(15, '7 rue André Fourcade, 87000 Limoges', 'Limoges', 'maison', 165, 420000),
-(16, '13 Rue Jean Jaurès, 87920 Condat-sur-Vienne','Condat-sur-Vienne', 'appartement', 63, 110000),
-(17, '2 Rue Alexandre Dumas, 87920 Condat-sur-Vienne','Condat-sur-Vienne','maison', 145, 160000),
-(18, '18 Rue Wagner, 87920 Condat-sur-Vienne','Condat-sur-Vienne','maison',220, 310000),
-(19, '1 Rue du Moulin Neuf, 87920 Condat-sur-Vienne','Condat-sur-Vienne','appartement', 75, 200000),
-(20, '16 Chem. de la Vigne, 87110 Le Vigen','Le Vigen','maison', 170, 230000),
-(21, '8 Imp. Joseph Mazabraud, 87110 Le Vigen', 'Le Vigen', 'appartement', 85, 180000),
-(22, '4 Imp. Joseph Mazabraud, 87110 Le Vigen','Le Vigen', 'maison', 135, 160000),
-(23, '3 Rue 19 Mars 1962, 87110 Le Vigen', 'Le Vigen', 'appartement', 65, 80000),
-(24, '30 avenue de la Libération, 87125 Rilhac-Rancon', 'Rilhac-Rancon', 'maison', 130, 223800),
+(13, '67 boulevard de la Corderie, 87000 Limoges', 'Limoges','appartement', 110, 400000),
+(14, '75 rue du Général du Cray, 87000 Limoges', 'Limoges', 'maison', 125, 375000),
+(15,'6 rue Elsa Triolet, 87000 Limoges', 'Limoges', 'maison', 112, 302000),
+(16, '7 rue André Fourcade, 87000 Limoges', 'Limoges', 'maison', 165, 420000),
+(17, '13 Rue Jean Jaurès, 87920 Condat-sur-Vienne','Condat-sur-Vienne', 'appartement', 63, 110000),
+(18, '2 Rue Alexandre Dumas, 87920 Condat-sur-Vienne','Condat-sur-Vienne','maison', 145, 160000),
+(19, '18 Rue Wagner, 87920 Condat-sur-Vienne','Condat-sur-Vienne','maison',220, 310000),
+(20, '1 Rue du Moulin Neuf, 87920 Condat-sur-Vienne','Condat-sur-Vienne','appartement', 75, 200000),
+(21, '16 Chem. de la Vigne, 87110 Le Vigen','Le Vigen','maison', 170, 230000),
+(22, '8 Imp. Joseph Mazabraud, 87110 Le Vigen', 'Le Vigen', 'appartement', 85, 180000),
+(23, '4 Imp. Joseph Mazabraud, 87110 Le Vigen','Le Vigen', 'maison', 135, 160000),
+(24, '3 Rue 19 Mars 1962, 87110 Le Vigen', 'Le Vigen', 'appartement', 65, 80000),
 (25, '10 rue Jules Michelet, 87125 Rilhac-Rancon', 'Rilhac-Rancon', 'maison', 155, 296800),
 (26, '6 route de Toulouse, 87220 Boisseuil', 'Boisseuil', 'maison', 90, 184000),
 (27, '2 route de Crouzy, 87220 Boisseuil', 'Boisseuil', 'maison', 60, 98000),
-(28, '10 route du buisson, 87220 Boisseuil', 'Boisseuil', 'maison', 164, 388500),
-(29, '67 boulevard de la Corderie, 87000 Limoges', 'Limoges','appartement', 110, 400000);
-
-
+(28, '10 route du buisson, 87220 Boisseuil', 'Boisseuil', 'maison', 164, 388500);
+--
 -- Indexes for dumped tables
 --
 

@@ -12,18 +12,18 @@
 		<h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
 
 
-		<div class="form">
-			<form method="POST" action="#">
-				<fieldset>
-					<legend>Que recherchez vous?</legend>
-				<div class="form-box">
-					<div class="form-top row around">
-						<div class="form-type row">
-							<label for="maison">Maison</label>
-							<input type="checkbox" name="maison" id="maison" ></br>
-							<label for="appartement">Appartement</label>
-							<input type="checkbox" name="appartement" id="maison" ></br>
-						</div>
+	<div class="form">
+		<form method="POST" action="pages/resultats.php">
+			<fieldset>
+		 	 	<legend>Que recherchez vous?</legend>
+			<div class="form-box">
+				<div class="form-top row around">
+		  			<div class="form-type row">
+						<label for="maison">Maison</label>
+						<input type="checkbox" name="maison" id="maison" ></br>
+						<label for="appartement">Appartement</label>
+						<input type="checkbox" name="appartement" id="maison" ></br>
+		  			</div>
 
 						<div class="form-surface row">
 							<label for="surface">Surface en m2</label>
