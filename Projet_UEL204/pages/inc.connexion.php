@@ -1,6 +1,6 @@
 <?php
 	// Param�tres de connexion
-	$serveur  = "localhost:3307";
+	$serveur  = "localhost:3306";
 	$database = "BDD_agence_immobiliere";
 	$user     = "root";
 	$password = "";
