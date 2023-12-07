@@ -1,3 +1,13 @@
+<?php
+    // création objet PDO
+    try{
+        $bdd= new PDO ('mysql:host=http://localhost/L204_GIT_projet/204/Projet_UEL204/assets/;dbname=BDD_agence_immobiliere;charset=utf8','root','root');
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "bdd connectée";
+    }catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -33,5 +43,19 @@
 
             </fieldset>
         </div>
+
+        <?php
+        /*
+            // requête pour accéder au contenu de la BDD
+            $requete = $bdd->query('SELECT * FROM bibliotheque');
+
+            // fetch pour extraire les utilisateurs
+            while ($data_identifiant = $requete->fetch()){
+                $data_identifiant["identifiant"].'<br>';
+            }
+            var_dump ($data_identifiant);
+            echo "pouet";
+            */
+        ?>
     </body>
 </html>
