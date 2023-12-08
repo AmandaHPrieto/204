@@ -1,6 +1,5 @@
 <?php
 session_start();
-include_once("inc.connexion.php");
 
 /***************TRAITEMENT DU FORMULAIRE D'INSCRIPTION***************/
 
@@ -94,6 +93,7 @@ if(isset($_POST) && count($_POST)){
             if(preg_match('/[!?+*,@#;]/', $userPassword)){
               array_push($_retours, 'Mot de passe :'.strip_tags($userPassword));
               $userPassword=strip_tags($userPassword);
+                $userPassword=password_hash($userPassword, PASSWORD_DEFAULT);
 
             }else{
               array_push($_retours, 'Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;');
@@ -128,18 +128,19 @@ if(isset($_POST) && count($_POST)){
 
 
 /***************INSERTION DANS LA BDD***************/
-$requeteSQL='INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)';
-
-$insertClient = $bdd->prepare($requeteSQL);
-
-$insertClient->execute([
-'identifiant' =>'toto',
-'motdepasse'=>'Toto25?to',
-'mail'=>'toto@gmail.com',
-]);
+//connexion à la BDD
+include_once("inc.connexion.php");
 
 
+$requete= $bdd->prepare('INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)');
 
+$requete->execute(array(
+'identifiant' =>$userId ,
+'motdepasse'=>$userPassword,
+'mail'=>$email,
+));
+echo'Vos identifiants ont bien été enregistrés.';
+$requete->closeCursor();
 
 
 
