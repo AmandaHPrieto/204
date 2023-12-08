@@ -49,6 +49,7 @@
             // requête pour accéder au contenu de la BDD
             $requete = $bdd->query('SELECT * FROM bibliotheque');
 
+<<<<<<< Updated upstream
             // fetch pour extraire les utilisateurs
             while ($data_identifiant = $requete->fetch()){
                 $data_identifiant["identifiant"].'<br>';
@@ -56,6 +57,81 @@
             var_dump ($data_identifiant);
             echo "pouet";
             */
+=======
+            /* Accès à la BDD
+            ******************************************************************************/
+                // On charge le fichier permettant de se connecter à la bdd
+                include 'inc.connexion.php';
+            
+                // requête pour accéder au contenu de la table CLIENTS
+                $requete = $bdd->query('SELECT * FROM clients');
+                $clients =  array();
+
+                // fetch pour récupérer les infos des clients
+                while ($data_utilisateurs = $requete->fetch()){
+                    if (!$data_utilisateurs){ // On teste si la réponse à la requête est vide.
+                        echo 'La BDD n\'existe pas ou est vide.';
+                        break;
+                    }
+                    else {
+                    $client=array(
+                        'ID' => $data_utilisateurs['id'],
+                        'Identifiant' => $data_utilisateurs['identifiant'],
+                        'Motdepasse' => $data_utilisateurs['motdepasse'],
+                    );
+
+                    //print_r ($client);
+
+                    array_push($clients, $client);
+
+                    //echo 'Id : '.$data_utilisateurs['id'].' - Identifiant : '.$data_utilisateurs['identifiant'].' - Mot de passe : '.$data_utilisateurs['motdepasse'].'<br>';
+
+                    }
+                }
+
+                // fin de parcours de la BDD
+                $requete->closeCursor();
+
+                print_r ($clients);
+                echo "<br><br>";
+                echo $clients[0]['Motdepasse'];
+                echo "<br><br>";
+                echo count($clients);
+
+             /* Login
+            ******************************************************************************/
+
+                $_SESSION["Utilisateur"]=array();
+
+                function fonctionVerifLoginMdp(){
+                    //vérif de transmission du formulaire
+                    if(isset($_GET) && count($_GET)>1){
+                        $login = $_GET["login"];
+                        echo $login;
+                        $pass = $_GET["pass"];
+                        echo $pass;
+
+                        //vérifications login :
+                        for ($i=0; $i<count($clients); $i++){
+                            if ($login == $clients[$i]['Identifiant']){
+                                // vérif mdp :
+                                if ($pass == $clients[$i]['Mot de passe']){
+                                    $utilisateur=array($login, $pass);
+                                    array_push ($_SESSION["Utilisateur"], $utilisateur);
+                                    echo "Vous êtes connecté";
+                                }else{
+                                    echo "Mot de passe incorrect.";
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+            /* Connexion
+            *****************************************************************************/
+            
+>>>>>>> Stashed changes
         ?>
     </body>
 </html>
