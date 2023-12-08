@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once("inc.connexion.php");
 
 /***************TRAITEMENT DU FORMULAIRE D'INSCRIPTION***************/
 
@@ -127,6 +128,15 @@ if(isset($_POST) && count($_POST)){
 
 
 /***************INSERTION DANS LA BDD***************/
+$requeteSQL='INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)';
+
+$insertClient = $bdd->prepare($requeteSQL);
+
+$insertClient->execute([
+'identifiant' =>'toto',
+'motdepasse'=>'Toto25?to',
+'mail'=>'toto@gmail.com',
+]);
 
 
 
