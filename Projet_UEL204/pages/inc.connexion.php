@@ -2,8 +2,8 @@
 	// Param�tres de connexion
 	$serveur  = "localhost:3306";
 	$database = "BDD_agence_immobiliere";
-	$user     = "root";
-	$password = "";
+	$user     = "ue_l204";
+	$password = "airphp";
 	
 	// CONNEXION A LA BASE DE DONNEES mysql //
 	/* 
