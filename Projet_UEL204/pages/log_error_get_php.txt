@@ -1,0 +1,8 @@
+[08-Dec-2023 08:48:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function araay() in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php:88
+Stack trace:
+#0 {main}
+  thrown in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 88
+[08-Dec-2023 08:48:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function araay() in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php:88
+Stack trace:
+#0 {main}
+  thrown in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 88
