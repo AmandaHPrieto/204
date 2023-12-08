@@ -1,12 +1,11 @@
-<?php
-    // création objet PDO
-    try{
-        $bdd= new PDO ('mysql:host=http://localhost/L204_GIT_projet/204/Projet_UEL204/assets/;dbname=BDD_agence_immobiliere;charset=utf8','root','root');
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "bdd connectée";
-    }catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }
+<?php	
+    //démarrage session
+    session_start();
+
+    //création d'un log erreurs
+	ini_set('display_errors', 'Off');
+	ini_set('log_errors', 'On');
+	ini_set('error_log', dirname(__file__) . '/log_error_get_php.txt');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -45,19 +44,6 @@
         </div>
 
         <?php
-        /*
-            // requête pour accéder au contenu de la BDD
-            $requete = $bdd->query('SELECT * FROM bibliotheque');
-
-<<<<<<< Updated upstream
-            // fetch pour extraire les utilisateurs
-            while ($data_identifiant = $requete->fetch()){
-                $data_identifiant["identifiant"].'<br>';
-            }
-            var_dump ($data_identifiant);
-            echo "pouet";
-            */
-=======
             /* Accès à la BDD
             ******************************************************************************/
                 // On charge le fichier permettant de se connecter à la bdd
@@ -98,10 +84,12 @@
                 echo "<br><br>";
                 echo count($clients);
 
+
              /* Login
             ******************************************************************************/
 
                 $_SESSION["Utilisateur"]=array();
+
 
                 function fonctionVerifLoginMdp(){
                     //vérif de transmission du formulaire
@@ -128,10 +116,6 @@
                     }
                 }
 
-            /* Connexion
-            *****************************************************************************/
-            
->>>>>>> Stashed changes
         ?>
     </body>
 </html>
