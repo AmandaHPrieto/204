@@ -44,7 +44,6 @@
         </div>
 
         <?php
-
             /* Accès à la BDD
             ******************************************************************************/
                 // On charge le fichier permettant de se connecter à la bdd
@@ -85,7 +84,12 @@
                 echo "<br><br>";
                 echo count($clients);
 
-                $_SESSION["Utilisateur"]=araay();
+
+             /* Login
+            ******************************************************************************/
+
+                $_SESSION["Utilisateur"]=array();
+
 
                 function fonctionVerifLoginMdp(){
                     //vérif de transmission du formulaire
@@ -112,9 +116,6 @@
                     }
                 }
 
-            /* Connexion
-            *****************************************************************************/
-            
         ?>
     </body>
 </html>
