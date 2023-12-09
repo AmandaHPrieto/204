@@ -1,50 +1,40 @@
 <?php
 	
-	/*
-		Fonction hasArticleInSession
-		Fonction permettant de déterminer si
-		des articles sont présents en SESSION
-	*/
-	function hasArticleInSession(){
+	/*fonction qui vérifie si l'utilisateur a déjà stocké des favoris*/ 
+	function favorisInSession(){
 		if($_SESSION 
 			&& count($_SESSION) 
-				&& array_key_exists('articles', $_SESSION)
-					&& gettype($_SESSION['articles']) === 'array'
-						&& count($_SESSION['articles'])){
+				&& array_key_exists('favoris', $_SESSION)
+					&& gettype($_SESSION['favoris']) === 'array'
+						&& count($_SESSION['favoris'])){
 			return true;
-		}else{
+		}
+		else{
 			return false;
 		}
 	}
 
-	/*
-		Fonction addArticleToSession
-		Permet d'ajouter un article 
-		en session
-	*/
-	function addArticleToSession($title, $image, $price, $ref){
-		if(!hasArticleInSession()){
-			$_SESSION['articles'] = array();
+
+	/* fonction permettant de créer une boite à favoris si elle n'existe pas déjà et d'ajouter un logement dedasn*/ 
+
+
+	function addFavoriToSession( $adresse, $ville, $type, $surface, $prix){
+		if(!favorisInSession()){
+			$_SESSION['favoris'] = array();
 		}
-
-		$_article = array(
-			'title' =>	htmlspecialchars($title),
-			'image' =>	htmlspecialchars($image),
-			'price' =>	htmlspecialchars($price),
-			'ref'   =>	htmlspecialchars($ref),
+		$_favori = array(
+			'adresse' =>	htmlspecialchars($adresse),
+			'ville' =>	htmlspecialchars($ville),
+			'type' =>	htmlspecialchars($type),
+			'surface'=> htmlspecialchars($surface),
+			'prix'  =>	htmlspecialchars($prix)
 		);
-
-		array_push($_SESSION['articles'], $_article);
-
+	
+		array_push($_SESSION['favoris'], $_favori);
+	
 	}
+	
 
-	/*
-		Fonction deleteAllArticles
-		Permet de supprimer les articles stockés en session
-	*/
-	function deleteAllArticles(){
-		$_SESSION['articles'] = array();
-	}
 
 	/*
 		Fonction isConnecte
@@ -108,7 +98,7 @@
 		}
 	}
 
-	function getArticleInfoFromJson($id_article){
+	/*function getArticleInfoFromJson($id_article){
 		$contenu_fichier = file_get_contents('articles.json');
 		$_articles       = json_decode($contenu_fichier, true);
 
@@ -121,5 +111,5 @@
 		}
 		return false;
 	}
-
+*/
 ?>
