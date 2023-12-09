@@ -21,7 +21,7 @@
         <h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
         <h2 class="row around">Page de connexion</h2>
         <a href="../index.php" class="row around">Retour à l'accueil</a>
-        <div class="form">
+        <form method="POST" action="connect.php" class="form">
             <fieldset>
 				<legend>Connectez-vous !</legend>
                 <div class="form-box">
@@ -41,7 +41,7 @@
                     </div>	
 
             </fieldset>
-        </div>
+</form>
 
         <?php
             /* Accès à la BDD
@@ -66,11 +66,7 @@
                         'Motdepasse' => $data_utilisateurs['motdepasse'],
                     );
 
-                    //print_r ($client);
-
                     array_push($clients, $client);
-
-                    //echo 'Id : '.$data_utilisateurs['id'].' - Identifiant : '.$data_utilisateurs['identifiant'].' - Mot de passe : '.$data_utilisateurs['motdepasse'].'<br>';
 
                     }
                 }
@@ -79,42 +75,74 @@
                 $requete->closeCursor();
 
                 print_r ($clients);
+                //echo "<br><br>";
+                //echo $clients[0]['Identifiant'];
+                echo "<br>";
+                //echo $clients[0]['Motdepasse'];
+                //echo "<br><br>";
+                $nbclients= count($clients);
+                echo "nb clients : ".$nbclients;
                 echo "<br><br>";
-                echo $clients[0]['Motdepasse'];
-                echo "<br><br>";
-                echo count($clients);
 
 
              /* Login
             ******************************************************************************/
 
-                $_SESSION["Utilisateur"]=array();
+                $_SESSION["Utilisateur"]=array(
+                    //array('Identifiant', 'erer'),
+                    //array('Mot de passe', '')
+                );
+
+                $_SESSION["connect"];
+
+                
 
 
-                function fonctionVerifLoginMdp(){
+                function fonctionVerifLoginMdp($clients, $nbclients){
                     //vérif de transmission du formulaire
-                    if(isset($_GET) && count($_GET)>1){
-                        $login = $_GET["login"];
+                    if(isset($_POST) && count($_POST)){
+                        $login = $_POST["login"];
+                        $pass = $_POST["pass"];
+                        /*echo "bouton cliqué<br>";
                         echo $login;
-                        $pass = $_GET["pass"];
+                        echo "<br>";                       
                         echo $pass;
+                        echo "<br>";*/
+
+                        
 
                         //vérifications login :
-                        for ($i=0; $i<count($clients); $i++){
-                            if ($login == $clients[$i]['Identifiant']){
+                        for ($i=0; $i<$nbclients; $i++){
+                            if ($login === $clients[$i]['Identifiant']){
                                 // vérif mdp :
-                                if ($pass == $clients[$i]['Mot de passe']){
+                                if ($pass === $clients[$i]['Motdepasse']){
+                                    //echo $clients[$i]['Motdepasse'];
                                     $utilisateur=array($login, $pass);
                                     array_push ($_SESSION["Utilisateur"], $utilisateur);
                                     echo "Vous êtes connecté";
+                                    $_SESSION["connect"]=1;
+                                    break;
                                 }else{
                                     echo "Mot de passe incorrect.";
+                                    $_SESSION["connect"]=0;
                                 }
                             }
                         }
 
                     }
                 }
+                
+                fonctionVerifLoginMdp($clients, $nbclients) ;
+
+                echo "<br>";
+                echo($_SESSION["Utilisateur"][0][0]); 
+                echo "<br>";
+                echo($_SESSION["Utilisateur"][0][1]);
+                echo "<br>";
+                echo $_SESSION["connect"];
+
+                
+                
 
         ?>
     </body>
