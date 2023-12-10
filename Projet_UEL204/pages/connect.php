@@ -120,7 +120,7 @@
                                     $utilisateur=array($login, $pass);
                                     array_push ($_SESSION["Utilisateur"], $utilisateur);
                                     echo "Vous êtes connecté";
-                                    $_SESSION["connect"]=1;
+                                    $_SESSION["connect"]=1;                                 
                                     break;
                                 }else{
                                     echo "Mot de passe incorrect.";
@@ -140,6 +140,14 @@
                 echo($_SESSION["Utilisateur"][0][1]);
                 echo "<br>";
                 echo $_SESSION["connect"];
+
+                // redirection vers la page index si connecté
+                if ($_SESSION["connect"] === 1){
+                    header('Location: ../index.php');
+                    exit();
+                }
+
+                
 
                 
                 

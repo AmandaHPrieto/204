@@ -451,3 +451,51 @@ Stack trace:
 [09-Dec-2023 16:18:22 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
 [09-Dec-2023 16:18:22 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
 [09-Dec-2023 16:18:22 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:49:58 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 96
+[10-Dec-2023 19:49:58 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:49:58 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:49:58 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:49:58 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:49:58 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 142
+[10-Dec-2023 19:50:10 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 96
+[10-Dec-2023 19:52:22 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 142
+[10-Dec-2023 19:52:22 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 142
+[10-Dec-2023 19:52:22 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 144
+[10-Dec-2023 19:52:22 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 144
+[10-Dec-2023 19:52:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php:124
+Stack trace:
+#0 C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php(139): fonctionVerifLoginMdp(Array, 12)
+#1 {main}
+  thrown in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 124
+[10-Dec-2023 19:53:49 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:53:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:53:49 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:53:49 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:03 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:03 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:03 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:03 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:05 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:05 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:05 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:05 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:08 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:08 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:08 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:08 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:20 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:20 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:20 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:20 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:25 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:25 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:25 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:25 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:35 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:35 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:54:35 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:54:35 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:59:18 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:59:18 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
+[10-Dec-2023 19:59:18 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
+[10-Dec-2023 19:59:18 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
