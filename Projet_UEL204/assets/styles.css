@@ -45,12 +45,23 @@ ul {
     justify-content: center;
 }
 
+/* page résultats */
+.button {
+  border: 3px solid goldenrod;
+  padding: 1rem;
+  width: 5rem;
+}
 /*menu*/
 
 
+/*favoris*/ 
 
-
-
+.favoris-box {
+  border: 3px solid goldenrod;
+}
+.card-fav  {
+  border : 1px solid goldenrod;
+}
 /*footer*/
 
 
@@ -101,6 +112,11 @@ padding-right: 2rem;
   border-radius: 20px;
   background-color:goldenrod;
 
+}
+.photo1{
+  width: 200px;
+    height: auto;
+    border: 1px solid #000;
 }
 
 /*************PAGE INSCRIPTION*************/
