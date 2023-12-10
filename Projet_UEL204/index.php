@@ -26,13 +26,14 @@
 		  			</div>
 
 						<div class="form-surface row">
-							<label for="surface">Surface en m2</label>
+							<label for="surface">Surface min en m2</label>
 							<input type="text" name="surface" id="surface"></br>
 						</div>
 
 						<div class="form-city row">
 							<label for="ville">Saisissez la ville où vous recherchez</label>
 								<select id="ville" name="ville">
+								<option value="">Veuillez indiquer votre ville</option>
 									<option value="Limoges">Limoges</option>
 									<option value="Panazol">Panazol</option>
 									<option value="Couzeix">Couzeix</option>
@@ -49,12 +50,12 @@
 							<label for="budget">Votre budget</label>
 								<select id="budget" name="budget">
 									<option value="">Veuillez indiquer votre budget</option>
-									<option value="inferieur à 100000">Moins de 100000€</option>
-									<option value="entre 100000 et 150000">100000 à 150000€</option>
-									<option value="entre 150000 et 200000€">150000 à 200000€</option>
-									<option value="entre 200000 et 250000€">200000 à 250000€</option>
-									<option value="entre 250000 et 350000€">250000 à 350000€</option>
-									<option value="Supérieur à 350000€">Au dessus de 350000€</option>
+									<option value="100000">100000€</option>
+									<option value="150000">150000€</option>
+									<option value="200000">200000€</option>
+									<option value="250000">250000€</option>
+									<option value="350000">350000€</option>
+									<option value="450000">450000€</option>
 								</select><br>
 						</div>
 					</div>
