@@ -129,7 +129,8 @@ include_once("inc.connexion.php");
 if(isset($email)){
   $requeteVerification=$bdd->prepare('SELECT COUNT(*)FROM clients WHERE mail = :mail'); //on compte le nombre de ligne qui correspond au mail fourni
   $requeteVerification->execute(array('mail' => $email));
-  $resultatVerification=$requeteVerification->fetchColumn(); //
+  $resultatVerification=$requeteVerification->fetchColumn();
+  $requeteVerification->closeCursor();
 
 
   if($resultatVerification>0){ //si sup à 0 = existence d'une correspondance donc utilisateur déjà inscrit => arrêter script d'insertion avec exit
