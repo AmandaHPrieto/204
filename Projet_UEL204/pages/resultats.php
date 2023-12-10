@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="png"/>
-    <link href="styles.css" rel="stylesheet">
+    <link href="../assets/styles.css" rel="stylesheet">
 </head>
 
 <body>
 	<fieldset class="fieldset">
-		<legend><strong>Affichage du résultat de la requête</strong></legend>
+		<legend id="legend"><strong>Affichage du résultat de la requête</strong></legend>
 	<?php
 	// On charge le fichier permettant de se connecter à la bdd
 	include 'inc.connexion.php';
@@ -35,7 +35,14 @@
 		else
 		{
 			// echo 'Adresse : '.$data['titre'].'<br>';
-			echo 'Identifiant : '.$data['id'].' - Adresse : '.$data['adresse'].' - Surface : '.$data['surface'].'<br>';
+			echo 'Identifiant :'.$data['id'].' - Adresse : '.$data['adresse'].' - Surface : '.$data['surface'].'<br>';
+
+			/*si le champs photo1 est renseigné, on affiche la photo associée avec <img>
+        if (!empty($data['photo1'])) {
+            // Affiche l'image avec la balise <img>
+            echo 'Photo : <img class="photo1" src="' . $data['photo1'] . '" alt="Photo du logement"><br>';
+        }
+        */
 		}
 	}
 	/* La requête fetch renvoie un booléen faux ('false') lorsqu'on est arrivé à la fin des données.
