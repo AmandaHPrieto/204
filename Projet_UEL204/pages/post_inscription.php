@@ -2,7 +2,8 @@
 session_start();
 
 /***************TRAITEMENT DU FORMULAIRE D'INSCRIPTION***************/
-  //Vérification transmission du formulaire
+
+  //Verification transmission du formulaire
 if(isset($_POST) && count($_POST)){
 
     //~ Tableau où l'on va stocker les différents messages à afficher !
@@ -11,6 +12,7 @@ if(isset($_POST) && count($_POST)){
     // 1- On teste le mail
     // La variable est théoriquement contenue dans la variable superglobale $_POST
     // On va donc vérifier que le tableau $_POST est alimenté et contient notre occurence "userMail"
+    //~
   if(array_key_exists('userMail', $_POST)){
       //~ Pour raccourcir la notation, on crée une autre variable
     $email = $_POST['userMail'];
@@ -42,6 +44,9 @@ if(isset($_POST) && count($_POST)){
 
     //~
     // 2- On teste l'identifiant
+    // La variable est théoriquement contenue dans la variable superglobale $_POST
+    // On va donc vérifier que le tableau $_POST est alimenté et contient notre occurence "user-mail"
+    //~
   if(array_key_exists('userId', $_POST) && !empty($_POST['userId'])){
       //~ Pour raccourcir la notation, on crée une autre variable
     $userId = $_POST['userId'];
@@ -67,6 +72,7 @@ if(isset($_POST) && count($_POST)){
 
     //~
     // 3- On teste le mot de passe
+    //~
   if(array_key_exists('userPassword', $_POST) && !empty($_POST['userPassword'])){
       //~ Pour raccourcir la notation, on crée une autre variable
     $userPassword = $_POST['userPassword'];
@@ -87,7 +93,6 @@ if(isset($_POST) && count($_POST)){
             if(preg_match('/[!?+*,@#;]/', $userPassword)){
               array_push($_retours, 'Mot de passe :'.strip_tags($userPassword));
               $userPassword=strip_tags($userPassword);
-                $userPassword=password_hash($userPassword, PASSWORD_DEFAULT);
 
             }else{
               array_push($_retours, 'Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;');
@@ -114,42 +119,17 @@ if(isset($_POST) && count($_POST)){
 
     //~ On fusionne et affiche les messages de notre tableau en une seule chaine de caractères.
   echo implode("<br>", $_retours);
+  echo '<br>Bonjour '. $userId .', bienvenue chez AirPHP ! L\'inscription a été un succès. Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.';
 
 }else{
   echo "<p>Aucun paramètre n'a été transmis.</p>";
 }
 
-/***************VERIFICATION EXISTENCE DU CLIENT***************/
-//on vérifie si l'utilisateur est déjà inscrit
-//Source du code =>UserContributedNotes de seanferd: https://www.php.net/manual/fr/pdostatement.fetchcolumn
-
-//connexion à la BDD
-include_once("inc.connexion.php");
-
-if(isset($email)){
-  $requeteVerification=$bdd->prepare('SELECT COUNT(*)FROM clients WHERE mail = :mail'); //on compte le nombre de ligne qui correspond au mail fourni
-  $requeteVerification->execute(array('mail' => $email));
-  $resultatVerification=$requeteVerification->fetchColumn();
-  $requeteVerification->closeCursor();
-
-
-  if($resultatVerification>0){ //si sup à 0 = existence d'une correspondance donc utilisateur déjà inscrit => arrêter script d'insertion avec exit
-    echo'Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.';
-    exit;
-  }
-}
 
 /***************INSERTION DANS LA BDD***************/
-$requeteInsertion= $bdd->prepare('INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)');
 
-$requeteInsertion->execute(array(
-'identifiant' =>$userId ,
-'motdepasse'=>$userPassword,
-'mail'=>$email,
-));
- echo '<br>Bonjour '. $userId .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.';
-echo'Vos identifiants ont bien été enregistrés.';
-$requeteInsertion->closeCursor();
+
+
 
 
 

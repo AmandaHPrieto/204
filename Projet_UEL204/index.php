@@ -26,7 +26,7 @@
 		  			</div>
 
 						<div class="form-surface row">
-							<label for="surface">Surface min en m2</label>
+							<label for="surface">Surface en m2</label>
 							<input type="text" name="surface" id="surface"></br>
 						</div>
 
@@ -55,7 +55,7 @@
 									<option value="200000">200000€</option>
 									<option value="250000">250000€</option>
 									<option value="350000">350000€</option>
-									<option value="450000">450000€</option>
+									<option value="450000€">450000€</option>
 								</select><br>
 						</div>
 					</div>

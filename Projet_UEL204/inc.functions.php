@@ -1,5 +1,4 @@
 <?php
-	include('pages/inc.connexion.php');
 	
 	/*fonction qui vérifie si l'utilisateur a déjà stocké des favoris*/ 
 	function favorisInSession(){
@@ -114,66 +113,77 @@
 	}
 */
 
-
-
-	// Amanda
-	// Fonction pour afficher tous les logements de la bdd
-
-	function afficherTousLogements(){
-		// On rend la variable bdd globale
-		global $bdd;
+// Fonction pour afficher les résultats d'une recherche
+function recherche(){
+	// On rend la variable bdd globale
+	global $bdd;
 	
-		/* On peut lire la requête ci-dessous comme cela :
-		   La requête ('query') est de sélectionner (SELECT) tout (=> *) ce qui est dans la table 'logements' 
-		   de la BDD définie par $dbb et de stocker toute la réponse dans la variable $requete.
-		   Ce qui est contenu dans la variable $requete n'est pas exploitable. Il faut aller plus loin. */
-		$requete = $bdd->query('SELECT * FROM logements');
+	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ville'], $_POST['surface'], $_POST['budget'])) {
+		$requete = $bdd->prepare('SELECT * FROM logements WHERE ville = ? AND surface > ? AND prix < ? ORDER BY prix ASC');
+		$requete->execute(array($_POST['ville'], $_POST['surface'], $_POST['budget']));
 		
-		/* On va traiter la réponse ($requete) entrée par entrée avec une boucle while.
-		   On va aller chercher (=> fetch) chaque entrée de la table successivement et on va stocker les valeurs
-		   dans un tableau associatif $data qui contient les valeurs de chaque champ pour toutes les entrées.
-		   On accède alors aux identifiants de cette façon => $data['identifiant']. */
-		while ($data = $requete->fetch())
-		{
-			if (!$data) // On teste si la réponse à la requête est vide.
+		while ($logement = $requete->fetch()){
+			if (!$logement) // On teste si la réponse à la requête est vide.
 			{
 				echo 'La BDD n\'existe pas ou est vide.';
 				break;
 			}
 			else
 			{
-				// echo 'Adresse : '.$data['titre'].'<br>';
-				echo 'Identifiant : '.$data['id'].' - Adresse : '.$data['adresse'].' - Type : '.$data['type'].' - Surface : '.$data['surface'].'m² - Prix : '.$data['prix'].'€<br>';
+				/*ajouter ici la condition if (isConnecte())*/
+				echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+				
+				$adresse=$logement['adresse'];
+				$ville=$logement['ville'];
+				$type=$logement['type'];
+				$surface=$logement['surface'];
+				$prix=$logement['prix'];
+				$logement=array();
+				$logements=array();
+				array_push($logement,  $adresse, $ville, $type,''.$surface.'m2, '.$prix.'€');
+				array_push($logements, $logement);	
 			}
+	
+			foreach($logements as $logement) {
+				echo '</br>';
+				foreach($logement as $element) {
+					echo ''.$element.' </br>';
+				}
+			}
+	
 		}
-		/* La requête fetch renvoie un booléen faux ('false') lorsqu'on est arrivé à la fin des données.
-		   La boucle while s'arrête donc. 
-		   La ligne ci-dessous indique qu'il faut "fermer le curseur qui parcourt les données".
-		   Il est impératif de le faire afin d'éviter tout problème lors de la requête suivante. */
+		
 		$requete->closeCursor();
 	}
-
-
-
-	// Fonction pour afficher les résultats d'une recherche
-	function recherche(){
-	// On rend la variable bdd globale
-	global $bdd;
-	
-	// Pour la récupération d'une partie de la BDD, on utilise la méthode des requêtes préparées permettant de se prémunir contre les injections SQL
-	// On utilise la méthode "prepare" de l'extension PDO afin de préparer une requête à être lancée (http://php.net/manual/fr/pdo.prepare.php)
-	// Puis la méthode "execute" de l'extension PDO pour lancer la requête après avoir inséré les paramètres (http://php.net/manual/fr/pdo.exec.php)
-
-	$requete = $bdd -> prepare('SELECT * FROM logements WHERE ville = ? AND surface > ? AND prix < ? ORDER BY prix ASC'); // Les résultats seront triés par prix du - cher au + cher
-	$requete->execute(array($_POST['ville'], $_POST[('surface')], $_POST['budget']));
-	
-	while ($data = $requete->fetch())
-	{	
-		echo 'Identifiant : '.$data['id'].' - Adresse : '.$data['adresse'].' - Type : '.$data['type'].' - Surface : '.$data['surface'].'m2 - Prix : '.$data['prix'].'€<br>';
-	}
-	$requete->closeCursor();
 }
 
 
+//fonction ajout fav
+function ajoutFav(){
+	// On rend la variable bdd globale
+	global $bdd;
+	if($_GET && count($_GET)){
+	
+		if(array_key_exists('logement', $_GET) && !empty($_GET['logement'])){
+			$id=$_GET['logement'];
+			$request = $bdd->query('SELECT * FROM logements WHERE id='.$id.'');
+	
+			while ($id = $request->fetch()){
+				$adresse=$id['adresse'];
+				$ville=$id['ville'];
+				$type=$id['type'];
+				$surface=$id['surface'].'m2';
+				$prix=$id['prix'].'€';
+	
+				favorisInSession();
+				addFavoriToSession( $adresse, $ville,$type, $surface, $prix);
+	
+				//adddMessageAlert("Produit ajouté !");
+				header('Location: resultats.php');
+				exit;
+			}
+		}
+	}
+}
 
 ?>
