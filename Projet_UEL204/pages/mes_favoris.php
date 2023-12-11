@@ -20,12 +20,7 @@
 
 
 
-   if(!favorisInSession()){
-       echo "Vous n'avez ajouté aucun logement dans vos favoris pour l'instant";
-    }
-    else {
-        echo "cool ça marche";
-    }
+   
 
 ?>
 <!DOCTYPE html>
@@ -46,18 +41,31 @@
                 
         </div>
      <div>
-                <?php  if(favorisInSession()){
+                <?php  
+                
+                if(!favorisInSession()){
+                    echo "Vous n'avez ajouté aucun logement dans vos favoris pour l'instant";
+                 }
+                 else {
                        foreach($_SESSION['favoris'] as $_favori){ 
                        echo '<div class="card-fav"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></br></div>';
                        foreach($_favori as $element) {
                         echo ''.$element.'</br>';
-                       }
-                         }
+                        }
+                        }
                      };
                  ?>
                   
             
         
         </div>
+
+        <fieldset class="fieldset">
+		<form method="post" action="../index.php">
+			<input type="submit" value="Retour à la page d'accueil" >
+		</form>
+
+	</fieldset>
+
     </body>
 </html>

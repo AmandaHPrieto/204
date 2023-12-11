@@ -65,7 +65,7 @@
 
             <div id="#compte-existant">
                 <p>Vous avez déjà un compte chez nous ?</p>
-                <a href="connect.php" title="J'accède à la page de connexion.">Se connecter</a>
+                <a href="#" title="J'accède à la page de connexion.">Se connecter</a>
             </div>
     </section><!-- eof .section-inscription -->
 
