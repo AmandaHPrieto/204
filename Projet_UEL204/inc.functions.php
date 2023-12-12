@@ -18,14 +18,14 @@
 	/* fonction permettant de créer une boite à favoris si elle n'existe pas déjà et d'ajouter un logement dedasn*/ 
 
 
-	function addFavoriToSession( $adresse, $ville, $type, $surface, $prix){
+	function addFavoriToSession( $adresse, $ville, $categorie, $surface, $prix){
 		if(!favorisInSession()){
 			$_SESSION['favoris'] = array();
 		}
 		$_favori = array(
 			'adresse' =>	htmlspecialchars($adresse),
 			'ville' =>	htmlspecialchars($ville),
-			'type' =>	htmlspecialchars($type),
+			'categorie' =>	htmlspecialchars($categorie),
 			'surface'=> htmlspecialchars($surface),
 			'prix'  =>	htmlspecialchars($prix)
 		);

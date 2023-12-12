@@ -34,7 +34,7 @@
 	catch(Exception $e)
 	{
 		// On lance une fonction PHP qui permet de conna�tre l'erreur renvoy�e lors de la connection � la base (en r�cup�rant le message li� � l'exception)
-		die('<strong>Erreur détectée !!! </strong> : ' . $e->getMessage());
+		die('<strong>Erreur détectée !!! </strong> : ' . $e->getMessage('oups'));
 	}
 ?>
 
