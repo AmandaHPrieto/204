@@ -126,7 +126,40 @@ if(isset($_POST) && count($_POST)){
 }
 
 
+/***************VERIFICATION EXISTENCE DU CLIENT***************/
+//on vérifie si l'utilisateur est déjà inscrit
+//Source du code =>UserContributedNotes de seanferd: https://www.php.net/manual/fr/pdostatement.fetchcolumn
+
 /***************INSERTION DANS LA BDD***************/
+//connexion à la BDD
+include_once("inc.connexion.php");
+
+if(isset($email)){
+  $requeteVerification=$bdd->prepare('SELECT COUNT(*)FROM clients WHERE mail = :mail'); //on compte le nombre de ligne qui correspond au mail fourni
+  $requeteVerification->execute(array('mail' => $email));
+  $resultatVerification=$requeteVerification->fetchColumn(); //
+
+$requete= $bdd->prepare('INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)');
+
+$requete->execute(array(
+  if($resultatVerification>0){ //si sup à 0 = existence d'une correspondance donc utilisateur déjà inscrit => arrêter script d'insertion avec exit
+    echo'Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.';
+    exit;
+  }
+}
+
+/***************INSERTION DANS LA BDD***************/
+$requeteInsertion= $bdd->prepare('INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)');
+
+$requeteInsertion->execute(array(
+'identifiant' =>$userId ,
+'motdepasse'=>$userPassword,
+'mail'=>$email,
+));
+ echo '<br>Bonjour '. $userId .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.';
+echo'Vos identifiants ont bien été enregistrés.';
+$requete->closeCursor();
+$requeteInsertion->closeCursor();
 
 
 
