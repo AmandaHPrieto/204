@@ -151,15 +151,32 @@ if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
     'motdepasse'=>$userPasswordValide,
     'mail'=>$emailValide,
     ));
-    echo '<br>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.';
     $requeteInsertion->closeCursor();
 
 }
 
 /***************OUVERTURE DE SESSION***************/
- setConnecte($userId, $userPassword);
-
-
-
+ setConnecte($userIdValide, $userPasswordValide);
 
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <title>Mon inscription</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+    </head>
+
+    <body>
+
+      <?php
+      if(isConnecte()){
+echo '<br>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.';
+}
+      ?>
+      <a href="../index.php" class="row around">Je trouve mon bonheur !</a>
+
+    </body>
+</html>

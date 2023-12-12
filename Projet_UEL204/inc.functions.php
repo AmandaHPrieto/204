@@ -130,8 +130,10 @@ function recherche(){
 			}
 			else
 			{
-				/*ajouter ici la condition if (isConnecte())*/
+				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
+				if (isConnecte()){
 				echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+			}
 				
 				$adresse=$logement['adresse'];
 				$ville=$logement['ville'];
