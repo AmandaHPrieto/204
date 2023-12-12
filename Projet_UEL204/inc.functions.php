@@ -112,4 +112,80 @@
 		return false;
 	}
 */
+
+// Fonction pour afficher les résultats d'une recherche
+function recherche(){
+	// On rend la variable bdd globale
+	global $bdd;
+	
+	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ville'], $_POST['surface'], $_POST['budget'])) {
+		$requete = $bdd->prepare('SELECT * FROM logements WHERE ville = ? AND surface > ? AND prix < ? ORDER BY prix ASC');
+		$requete->execute(array($_POST['ville'], $_POST['surface'], $_POST['budget']));
+		
+		while ($logement = $requete->fetch()){
+			if (!$logement) // On teste si la réponse à la requête est vide.
+			{
+				echo 'La BDD n\'existe pas ou est vide.';
+				break;
+			}
+			else
+			{
+				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
+				if (isConnecte()){
+				echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+			}
+				
+				$adresse=$logement['adresse'];
+				$ville=$logement['ville'];
+				$type=$logement['type'];
+				$surface=$logement['surface'];
+				$prix=$logement['prix'];
+				$logement=array();
+				$logements=array();
+				array_push($logement,  $adresse, $ville, $type,''.$surface.'m2, '.$prix.'€');
+				array_push($logements, $logement);	
+			}
+	
+			foreach($logements as $logement) {
+				echo '</br>';
+				foreach($logement as $element) {
+					echo ''.$element.' </br>';
+				}
+			}
+	
+		}
+		
+		$requete->closeCursor();
+	}
+}
+
+
+//fonction ajout fav
+function ajoutFav(){
+	// On rend la variable bdd globale
+	global $bdd;
+	if($_GET && count($_GET)){
+	
+		if(array_key_exists('logement', $_GET) && !empty($_GET['logement'])){
+			$id=$_GET['logement'];
+			$request = $bdd->query('SELECT * FROM logements WHERE id='.$id.'');
+	
+			while ($id = $request->fetch()){
+				$adresse=$id['adresse'];
+				$ville=$id['ville'];
+				$type=$id['type'];
+				$surface=$id['surface'].'m2';
+				$prix=$id['prix'].'€';
+	
+				favorisInSession();
+				addFavoriToSession( $adresse, $ville,$type, $surface, $prix);
+	
+				//adddMessageAlert("Produit ajouté !");
+				header('Location: resultats.php');
+				exit;
+			}
+		}
+	}
+}
+
 ?>

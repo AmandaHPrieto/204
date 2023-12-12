@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	include 'inc.connexion.php';
+<<<<<<< HEAD
 	include '../inc.functions.php';
 
 	if($_GET && count($_GET)){
@@ -27,6 +28,9 @@
 	}
 	
 
+=======
+	include '../inc.functions.php';	
+>>>>>>> main
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +46,9 @@
 <body>
 	<fieldset class="fieldset">
 		<legend><strong>Résultats de vos recherches</strong></legend>
+
 	<?php
+<<<<<<< HEAD
 	// On charge le fichier permettant de se connecter à la bdd
 	include 'inc.connexion.php';
 
@@ -116,6 +122,13 @@ $requete->execute();
 	   La ligne ci-dessous indique qu'il faut "fermer le curseur qui parcourt les données".
 	   Il est impératif de le faire afin d'éviter tout problème lors de la requête suivante. */
 
+=======
+
+recherche();
+ajoutFav();	
+
+
+>>>>>>> main
 	?>
 	</fieldset>
 	<br><br>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+include '../inc.functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -9,34 +14,7 @@
 	
 <body>  
 		
-	<header>
-
-     	<div class="">
-        
-        <nav id="main-nav">
-            <ul class="row nowrap">                   
-                <li class="main-nav-item">
-                    <a href="#" class="main-nav-link" title="Séjours">Accueil</a>
-                </li>
-
-                <li class="main-nav-item">
-                    <a href="#" class="main-nav-link" title="Circuits">Biens à vendre</a>
-                </li>   
-
-                <li class="main-nav-item">
-                    <a href="#" class="main-nav-link" title="Réservations">Nos services</a>
-                </li>
-
-                <li class="main-nav-item">
-                    <a href="#" class="main-nav-link" title="Notre agence">Notre agence</a>
-                </li>             
-                <li class="main-nav-item">
-                    <a href="#" class="main-nav-link" title="Créez votre voyage">Espace client</a>
-                </li>                    
-            </ul>
-         </nav><!-- eof .main-nav -->	        
-	</header><!-- eof .header -->
-
+    <?php if(!isConnecte()) : ?>
 	<section class="section-inscription">
 
         <form action="post_inscription.php" method="POST" class="">
@@ -75,5 +53,8 @@
         <p><i>Vous pouvez sans motif retirer à tout moment votre consentement au traitement de vos données, vous opposer au traitement de vos données et exercer votre droit à la portabilité de vos données.</i></p>
     </section>
 
+    <?php else: ?>
+                Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).
+            <?php endif; ?>
 </body>
 </html>

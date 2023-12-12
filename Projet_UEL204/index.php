@@ -30,6 +30,7 @@
 						<input type="text" name="surface" id="surface"></br>
 					</div>
 
+<<<<<<< HEAD
 					<div class="form-city row">
 						<label for="ville">Saisissez la ville où vous recherchez</label>
 							<select id="ville" name="ville">
@@ -44,17 +45,47 @@
 								<option value="Rilhac-Rancon">Rilhac-Rancon</option>
 								<option value="Boisseuil">Boisseuil</option>
 							</select><br>
+=======
+						<div class="form-surface row">
+							<label for="surface">Surface en m2</label>
+							<input type="text" name="surface" id="surface"></br>
+						</div>
+
+						<div class="form-city row">
+							<label for="ville">Saisissez la ville où vous recherchez</label>
+								<select id="ville" name="ville">
+								<option value="">Veuillez indiquer votre ville</option>
+									<option value="Limoges">Limoges</option>
+									<option value="Panazol">Panazol</option>
+									<option value="Couzeix">Couzeix</option>
+									<option value="Feytiat">Feytiat</option>
+									<option value="Condat-sur-Vienne">Condat-sur-Vienne</option>
+									<option value="Le Vigen">Le Vigen</option>
+									<option value="Verneuil-sur-Vienne">Verneuil-sur-Vienne</option>
+									<option value="Rilhac-Rancon">Rilhac-Rancon</option>
+									<option value="Boisseuil">Boisseuil</option>
+								</select><br>
+>>>>>>> main
 						</div>
 
 						<div class="form-budget row">
 							<label for="budget">Votre budget</label>
 								<select id="budget" name="budget">
+<<<<<<< HEAD
 									<option value="">Veuillez indiquer votre budget max</option>
 									<option value="100000">100000€</option>
 									<option value="150000">150000€</option>
 									<option value="200000€">200000€</option>
 									<option value="250000€">250000€</option>
 									<option value="350000€">300000€</option>
+=======
+									<option value="">Veuillez indiquer votre budget</option>
+									<option value="100000">100000€</option>
+									<option value="150000">150000€</option>
+									<option value="200000">200000€</option>
+									<option value="250000">250000€</option>
+									<option value="350000">350000€</option>
+>>>>>>> main
 									<option value="450000€">450000€</option>
 								</select><br>
 						</div>
