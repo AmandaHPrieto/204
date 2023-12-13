@@ -2,6 +2,7 @@
     //démarrage session
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -13,9 +14,14 @@
 	</head>
 
 	<body>
-		<h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
 
-
+		<header class="bandeau">
+			<?php 
+			include('menu.php');
+			?>
+			<h1>AirPHP: les bonnes bases pour votre maison!</h1>
+		</header>
+<section>
 	<div class="form">
 		<form method="POST" action="pages/resultats.php">
 			<fieldset>
@@ -70,6 +76,7 @@
 				</fieldset>
 			</form>
 		</div>
+</section>
 
 		<div class="connect">
 			<a href="pages/connect.php">Connexion</a>
