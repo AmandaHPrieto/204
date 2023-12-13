@@ -144,7 +144,7 @@ function recherche(){
 				$prix=$logement['prix'];
 				$logement=array();
 				$logements=array();
-				array_push($logement,  $adresse, $ville, $categorie,''.$surface.'m2, '.$prix.'€');
+				array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.'m2, '.$prix.'€');
 				array_push($logements, $logement);	
 			}
 
