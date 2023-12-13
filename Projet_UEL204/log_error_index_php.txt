@@ -170,3 +170,44 @@ Stack trace:
 #0 D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\index.php(113): addFavori()
 #1 {main}
   thrown in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Warning:  Undefined array key "ville" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Warning:  Undefined array key "surface" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Warning:  Undefined array key "budget" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Warning:  Undefined array key "categorie" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Warning:  Undefined variable $requete in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:16:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function closeCursor() on null in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php:186
+Stack trace:
+#0 D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\index.php(113): addFavori()
+#1 {main}
+  thrown in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Warning:  Undefined array key "ville" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Warning:  Undefined array key "surface" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Warning:  Undefined array key "budget" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Warning:  Undefined array key "categorie" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Warning:  Undefined variable $requete in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:17:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function closeCursor() on null in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php:186
+Stack trace:
+#0 D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\index.php(113): addFavori()
+#1 {main}
+  thrown in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:17:14 Europe/Berlin] PHP Warning:  Undefined array key "categorie" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:17:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:17:14 Europe/Berlin] PHP Warning:  Undefined variable $requete in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:17:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function closeCursor() on null in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php:186
+Stack trace:
+#0 D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\index.php(113): addFavori()
+#1 {main}
+  thrown in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Warning:  Undefined array key "ville" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Warning:  Undefined array key "surface" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Warning:  Undefined array key "budget" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 111
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Warning:  Undefined array key "categorie" in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 115
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Warning:  Undefined variable $requete in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186
+[13-Dec-2023 23:17:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function closeCursor() on null in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php:186
+Stack trace:
+#0 D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\index.php(113): addFavori()
+#1 {main}
+  thrown in D:\xampp\htdocs\localhost\amanda-connect\check\Projet_UEL204\inc.functions.php on line 186

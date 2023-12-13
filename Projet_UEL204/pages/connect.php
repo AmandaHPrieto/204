@@ -65,15 +65,16 @@
         <h2 class="row around">Page de connexion</h2>
         <a href="../index.php" class="row around">Retour à l'accueil</a>
         
-        <div id="#compte-existant">
-            <p>Vous n'avez pas un compte chez nous ?</p>
-            <a href="inscription.php" title="J'accède à la page d'inscription.">S'inscrire</a>
-        </div>
         
 
         <?php lireEtSupprimeMessageSession();?>
             
             <?php if(!isConnecte()) : ?>
+                <div id="#compte-existant">
+            <p>Vous n'avez pas un compte chez nous ?</p>
+            <a href="inscription.php" title="J'accède à la page d'inscription.">S'inscrire</a>
+        </div>
+        
                 <form method="POST">
                     <div class="row">
                         <div class="col">
