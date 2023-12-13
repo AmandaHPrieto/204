@@ -1,7 +1,6 @@
 <?php 
 	session_start();
 	include 'inc.connexion.php';
-<<<<<<< HEAD
 	include '../inc.functions.php';
 
 	if($_GET && count($_GET)){
@@ -28,9 +27,6 @@
 	}
 	
 
-=======
-	include '../inc.functions.php';	
->>>>>>> main
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +44,6 @@
 		<legend><strong>Résultats de vos recherches</strong></legend>
 
 	<?php
-<<<<<<< HEAD
 	// On charge le fichier permettant de se connecter à la bdd
 	include 'inc.connexion.php';
 
@@ -68,14 +63,16 @@ $param_categ = ''; //les checkbox porte le meme nom mais une valeur différente 
 	foreach($_POST['categorie'] as $valeur ) { //on parcourt les valeurs de notre tableau de retours checkbox.
 		$param_categ .= 'categorie="'.$valeur.'" OR '; 
 	}
+	
+	echo $param_categ; //je te laisse le echo comme ça tu vois l'apercu. 
+	if($param_categ != '' ) $requete .= ' AND ('.substr($param_categ, 0, -4).')'; // on retire le OR qui va s'ajouter à la fin de la boucle
+	
+	echo $requete; // en faisant cela on peut récupérer la requete et la tester dans l'ongler sql de php my admin directement.
+	
+	$requete=$bdd->prepare($requete);
+	$requete->execute();
+	
 
-echo $param_categ; //je te laisse le echo comme ça tu vois l'apercu. 
-if($param_categ != '' ) $requete .= ' AND ('.substr($param_categ, 0, -4).')'; // on retire le OR qui va s'ajouter à la fin de la boucle
-
-echo $requete; // en faisant cela on peut récupérer la requete et la tester dans l'ongler sql de php my admin directement.
-
-$requete=$bdd->prepare($requete);
-$requete->execute();
 
 
 	/* On va traiter la réponse ($requete) entrée par entrée avec une boucle while.
@@ -122,13 +119,6 @@ $requete->execute();
 	   La ligne ci-dessous indique qu'il faut "fermer le curseur qui parcourt les données".
 	   Il est impératif de le faire afin d'éviter tout problème lors de la requête suivante. */
 
-=======
-
-recherche();
-ajoutFav();	
-
-
->>>>>>> main
 	?>
 	</fieldset>
 	<br><br>
