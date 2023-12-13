@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #140460;
+  --secondary-color: #2B463C;
+  --black-color: #1B1B1B;
+  --white-color: #fefefe;
+
+  --primary-font: 'Sniglet', Arial, sans-serif;
+  --secondary-font: 'Poppins', Arial, sans-serif;
+  --tertiary-font: 'Roboto', Arial, sans-serif;
+}
+
 *, 
 *:after,
 *:before {
@@ -26,6 +37,9 @@ ul {
 .row {
   display: flex;
   flex-direction: row; 
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .around {
@@ -46,18 +60,36 @@ ul {
 }
 
 /*menu*/
+.bandeau{
+    background-color: var(--primary-color);
+}
 
-.bandeau div{
-  background-color: #140460;
-  font-size: 2rem;
-  font-weight: bold;
- 
+.header-logo{
+ height: 3.5rem;
+ width: auto;
+ padding-top: .5rem;
+}
+
+.bandeau ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.bandeau ul li{
+  margin-right: 1.5rem;
 }
 
 .bandeau a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white-color);
+  padding: .5rem 1rem;
+  font-family: var(--primary-font);
 }
+
+.bandeau a:hover {
+  border: .5px solid var(--secondary-color);
+}
+
 
 /*favoris*/ 
 
