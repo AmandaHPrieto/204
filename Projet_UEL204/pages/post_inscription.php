@@ -1,7 +1,8 @@
 <?php
 session_start();
+include '../inc.functions.php';
 
-/***************TRAITEMENT DU FORMULAIRE D'INSCRIPTION***************/
+/***************TRAITEMENT FORMULAIRE INSCRIPTION***************/
 
   //Verification transmission du formulaire
 if(isset($_POST) && count($_POST)){
@@ -26,9 +27,9 @@ if(isset($_POST) && count($_POST)){
           //~ On test si le format du mail convient
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 
-            //~ On prépare le message final en supprimant les balises HTML et stockage info sécurisée dans variable
-          array_push($_retours, 'Votre mail : '.strip_tags($email));
-          $email = strip_tags($email);
+            //~ On sécurise le paramètre transmis et on le stocke dans une nouvelle variable
+          $emailValide = strip_tags($email);
+          //~On prépare le message final si le paramètre est incorrect
         }else{
           array_push($_retours, 'Votre mail n\'est pas considéré comme valide !');
         }
@@ -44,11 +45,8 @@ if(isset($_POST) && count($_POST)){
 
     //~
     // 2- On teste l'identifiant
-    // La variable est théoriquement contenue dans la variable superglobale $_POST
-    // On va donc vérifier que le tableau $_POST est alimenté et contient notre occurence "user-mail"
     //~
   if(array_key_exists('userId', $_POST) && !empty($_POST['userId'])){
-      //~ Pour raccourcir la notation, on crée une autre variable
     $userId = $_POST['userId'];
 
       //~ On teste si le nom est bien une chaîne de caractère
@@ -57,9 +55,9 @@ if(isset($_POST) && count($_POST)){
         //~ Vérification de la taille de la chaine de caractère
       if(strlen($userId) >= 6 && strlen($userId) <= 20){
 
-          //~ On prépare le message final en supprimant les balises HTML et stockage info sécurisée dans variable
-        array_push($_retours, 'Identifiant : '.strip_tags($userId));
-        $userId = strip_tags($userId);
+          //~ On sécurise le paramètre transmis et on le stocke dans une nouvelle variable
+        $userIdValide = strip_tags($userId);
+        //~On prépare le message final si le paramètre est incorrect
       }else{
         array_push($_retours, 'La taille de l\'identifiant doit être entre 6 et 20 caractères.');
       }
@@ -74,7 +72,6 @@ if(isset($_POST) && count($_POST)){
     // 3- On teste le mot de passe
     //~
   if(array_key_exists('userPassword', $_POST) && !empty($_POST['userPassword'])){
-      //~ Pour raccourcir la notation, on crée une autre variable
     $userPassword = $_POST['userPassword'];
 
       //verifie la taille du mot de passe
@@ -89,10 +86,10 @@ if(isset($_POST) && count($_POST)){
             //verifie si le mot de passe contient au moins une lettre en minuscule
           if(preg_match('/[a-z]/', $userPassword)){
 
-              //verifie si le mot de passe contient au moins un caractère spécial et stockage info sécurisée dans variable
+              //verifie si le mot de passe contient au moins un caractère spécial et stockage du mot de passe hashé et sécurisé dans une nouvelle variable
             if(preg_match('/[!?+*,@#;]/', $userPassword)){
-              array_push($_retours, 'Mot de passe :'.strip_tags($userPassword));
               $userPassword=strip_tags($userPassword);
+              $userPasswordValide=password_hash($userPassword, PASSWORD_DEFAULT);
 
             }else{
               array_push($_retours, 'Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;');
@@ -119,19 +116,65 @@ if(isset($_POST) && count($_POST)){
 
     //~ On fusionne et affiche les messages de notre tableau en une seule chaine de caractères.
   echo implode("<br>", $_retours);
-  echo '<br>Bonjour '. $userId .', bienvenue chez AirPHP ! L\'inscription a été un succès. Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.';
 
 }else{
   echo "<p>Aucun paramètre n'a été transmis.</p>";
 }
 
 
-/***************INSERTION DANS LA BDD***************/
+/***************MANIPULATION DE LA BDD***************/
+//connexion à la BDD
+include_once("inc.connexion.php");
 
 
+//on pose une condition pour que tous les paramètres soient corrects avant traitement avec la BDD
+if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
 
+  //~On vérifie si l'utilisateur est déjà inscrit
+    //Source du code =>UserContributedNotes de seanferd: https://www.php.net/manual/fr/pdostatement.fetchcolumn
+    $requeteVerification=$bdd->prepare('SELECT COUNT(*)FROM clients WHERE mail = :mail'); //on compte le nombre de ligne qui correspond au mail fourni
+    $requeteVerification->execute(array('mail' => $emailValide));
+    $resultatVerification=$requeteVerification->fetchColumn();
 
+    $requeteVerification->closeCursor();
 
+    if($resultatVerification>0){ //si sup à 0 = existence d'une correspondance donc utilisateur déjà inscrit => arrêter script d'insertion avec exit
+    echo'Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.';
+    exit;
+    }
 
+  //~On insert les données dans la BDD
+    $requeteInsertion= $bdd->prepare('INSERT INTO clients(identifiant, motdepasse, mail) VALUES(:identifiant, :motdepasse, :mail)');
+
+    $requeteInsertion->execute(array(
+    'identifiant' =>$userIdValide ,
+    'motdepasse'=>$userPasswordValide,
+    'mail'=>$emailValide,
+    ));
+    $requeteInsertion->closeCursor();
+
+}
+
+/***************OUVERTURE DE SESSION***************/
+ setConnecte($userIdValide, $userPasswordValide);
 
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <title>Mon inscription</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+    </head>
+
+    <body>
+
+      <?php if(isConnecte()){
+echo '<br>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.<br><a href="../index.php" class="row around">Je trouve mon bonheur !</a>';
+}
+      ?>
+
+    </body>
+</html>

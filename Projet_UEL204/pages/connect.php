@@ -42,6 +42,11 @@
 
             </fieldset>
 </form>
+        </div>
+        <div id="#compte-existant">
+                <p>Vous n'avez pas un compte chez nous ?</p>
+                <a href="inscription.php" title="J'accède à la page de connexion.">S'inscrire</a>
+        </div>
 
         <?php
             /* Accès à la BDD
