@@ -33,6 +33,10 @@
     </head>
 
     <body>
+        <header class="bandeau ">
+            <?php include('../menu.php'); ?>
+        </header>
+
         <div class="favoris-box row ">  
            
                 <img src="../assets/images/favoris.png" width="100px" alt="icone-favoris" class="row" >

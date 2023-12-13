@@ -10,9 +10,15 @@ include '../inc.functions.php';
 		<meta name="viewport" content="width=device-width">
 		<title>Page d'inscription</title>
 		<link rel="stylesheet" type="text/css" href="../assets/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
 	</head>
 	
 <body>  
+    <header class="bandeau ">
+        <?php include('../menu.php'); ?>
+    </header>
 		
     <?php if(!isConnecte()) : ?>
 	<section class="section-inscription">

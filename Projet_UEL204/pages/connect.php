@@ -15,9 +15,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="png"/>
         <link href="../assets/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
     </head>
 
     <body>
+        <header class="bandeau ">
+            <?php include('../menu.php'); ?>
+        </header>
+
         <h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
         <h2 class="row around">Page de connexion</h2>
         <a href="../index.php" class="row around">Retour à l'accueil</a>
