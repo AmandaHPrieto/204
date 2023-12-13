@@ -23,9 +23,9 @@ include '../inc.functions.php';
     <?php if(!isConnecte()) : ?>
 	<section class="section-inscription">
 
-        <form action="post_inscription.php" method="POST" class="">
+        <form action="post_inscription.php" method="POST">
                 <fieldset>
-                    <legend class="inscription-form-legend">Créer un compte </legend>
+                    <legend class="inscription-form-legend">Inscrivez-vous ! </legend>
                     
                     <p class="inscription-form-item">
                         <label class="inscription-form-label" for="userMail">Mail</label>
@@ -33,7 +33,7 @@ include '../inc.functions.php';
                     </p>
                     <p class="inscription-form-item">
                         <label class="inscription-form-label" for="userId">Identifiant</label>
-                        <input class="inscription-form-input" type="text" name="userId" id="userId" >
+                        <input class="inscription-form-input" type="text" name="userId" id="userId" placeholder="6 caractères minimum" >
                     </p>
                     <p class="inscription-form-item">
                         <label class="inscription-form-label" for="userPassword">Mot de passe</label>
@@ -44,19 +44,22 @@ include '../inc.functions.php';
                     </p>                        
                                      
                 </fieldset>
-                 
-            </form>
-
-            <div id="#compte-existant">
+                 <div id="#compte-existant">
                 <p>Vous avez déjà un compte chez nous ?</p>
                 <a href="#" title="J'accède à la page de connexion.">Se connecter</a>
             </div>
+
+            </form>
+
+
+
     </section><!-- eof .section-inscription -->
 
     <section class="mentions-legales">
-        <br><br><br>
-        <p><i>L'agence AirPHP collecte et traite vos données à caractère personnel, en qualité de responsable de traitements, aux fins de gestion et de suivi de vos demandes de contact, de renseignements ou de réclamation, des fonctionnalités qui vous sont proposées via le site (cf. notamment création et accès à un compte en ligne accessible depuis la rubrique « Espace client »), et plus généralement de leurs relations avec vous au sens large, ou encore de leurs éventuels contentieux, pour la réalisation et l’élaboration d’études et de statistiques, ainsi que pour la réalisation d’opérations commerciales, de développement, de communication, de sollicitation, de prospection, de fidélisation ou de marketing sur tous supports et par tous moyens.</i></p>
-        <p><i>Vous pouvez sans motif retirer à tout moment votre consentement au traitement de vos données, vous opposer au traitement de vos données et exercer votre droit à la portabilité de vos données.</i></p>
+        <div class="row">
+        <p >L'agence AirPHP collecte et traite vos données à caractère personnel, en qualité de responsable de traitements, aux fins de gestion et de suivi de vos demandes de contact, de renseignements ou de réclamation, des fonctionnalités qui vous sont proposées via le site (cf. notamment création et accès à un compte en ligne accessible depuis la rubrique « Espace client »), et plus généralement de leurs relations avec vous au sens large, ou encore de leurs éventuels contentieux, pour la réalisation et l’élaboration d’études et de statistiques, ainsi que pour la réalisation d’opérations commerciales, de développement, de communication, de sollicitation, de prospection, de fidélisation ou de marketing sur tous supports et par tous moyens.
+        <br>Vous pouvez sans motif retirer à tout moment votre consentement au traitement de vos données, vous opposer au traitement de vos données et exercer votre droit à la portabilité de vos données.</p>
+    </div>
     </section>
 
     <?php else: ?>
