@@ -32,7 +32,7 @@
                         //~ Des données issues d'un formulaire de connexion sont transmises
                         setConnecte($_POST['login'], $hash);
                     } else {
-                        adddMessageAlert("Identifiant ou mot de passe incorrect");
+                        addMessageAlert("Identifiant ou mot de passe incorrect");
                     }
 
 

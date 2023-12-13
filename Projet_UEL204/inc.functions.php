@@ -18,7 +18,7 @@
 	/* fonction permettant de créer une boite à favoris si elle n'existe pas déjà et d'ajouter un logement dedasn*/ 
 
 
-	function addFavoriToSession( $adresse, $ville, $categorie, $surface, $prix){
+	function addFavoriToSession( $photo, $adresse, $ville, $categorie, $surface, $prix){
 		if(!favorisInSession()){
 			$_SESSION['favoris'] = array();
 		}
@@ -134,7 +134,7 @@ function recherche(){
 			{
 				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
 				if (isConnecte()){
-				echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+				echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
 			}
 				$photo=$logement['photo'];
 				$adresse=$logement['adresse'];
@@ -171,6 +171,7 @@ function addFavori(){
 			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id.'');
 	
 			while ($id = $request->fetch()){
+				$photo=$id['photo'];
 				$adresse=$id['adresse'];
 				$ville=$id['ville'];
 				$categorie=$id['categorie'];
@@ -178,7 +179,7 @@ function addFavori(){
 				$prix=$id['prix'];
 	
 				favorisInSession();
-				addFavoriToSession($adresse, $ville,$categorie, $surface, $prix);
+				addFavoriToSession($photo, $adresse, $ville,$categorie, $surface, $prix);
 			}
 		}
 	} 

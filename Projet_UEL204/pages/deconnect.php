@@ -7,7 +7,7 @@
     include '../inc.functions.php';
 
     //~ Message de déconnexion
-    adddMessageAlert("Vous êtes correctement déconnecté.");
+    addMessageAlert("Vous êtes correctement déconnecté.");
 
     setDeconnecte();
     
