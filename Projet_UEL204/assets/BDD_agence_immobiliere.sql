@@ -39,18 +39,15 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `identifiant`, `motdepasse`, `mail`) VALUES
-(1, 'Administrateur', '83CCutv8', 'admin@airphp.com'),
-(2, 'Paulo87', 'paulo', 'paulo87@gmail.com'),
-(3, 'jackie458', 'motdepasse', 'jackie458@mail.fr'),
-(4, 'mickeline', 'micke', 'maickeline87@yahoo.fr'),
-(5, 'josette28', 'lenomdemonchat', 'josette28@gmail.com'),
-(6, 'dédé87350', 'fazer600', 'dede.lejeune@hotmail.fr'),
-(7, 'GerardM', 'chantal1971', 'gerard.menvussaa@hotmail.com'),
-(8, 'celine23', 'coquelicot2012', 'celine20@gmail.com'),
-(9, 'Michael Jaquesson', 'mobidick31', 'michael.j@yahoo.fr'),
-(10, 'Manudu95', '1234', 'manudu95@gmail.com'),
-(11, 'Kyzywyx', 'tokiohotel4ever', 'kyzywyx@hotmail.fr'),
-(12, 'CrazyFrog', 'bebebebep', 'crazyfrog@gmail.com');
+(1, 'Administrateur', '$2y$10$ChHvkcPwbN/5jzGVtFIDPu.RGkAUks/8C0c8TPOLOCDUB9fSXnS.6', 'admin@airphp.com'),
+(2, 'Paulo87', '$2y$10$VPIov7Jj9f5ftdLRJGlHMuK2cHO7rR6viHTHsvsD0ydYR8uNQ0eQO', 'paulo87@gmail.com'),
+(3, 'mickeline', '$2y$10$iY1gxhqtXvNEOg0MRLgTSeILK2pIZfR1c./1LF8/qHPs6C7EP97de', 'mickeline87@yahoo.fr'),
+(4, 'josette28', '$2y$10$34hoSan9itiX7owp8JJ6xe6eZNez0GIxNLogjq5o4VZlbfh.MjQPW', 'josette28@gmail.com'),
+(5, 'GerardM', '$2y$10$FmfBmKHXIjliebAZ/68B/e.mQw4E9sfBXT9/dihWyQsCv3xWom5aC', 'gerard.mvussa@hotmail.com'),
+(6, 'celine23', '$2y$10$K6vM4uanzRAFLgG6mcD/FuNwbiki9K.puR00tvkPzJXNkqodz4cv6', 'celine20@gmail.com'),
+(7, 'Michael Jaquesson', '$2y$10$ro2xtYbYGI1IQZrlXrFQDO1F0LVuj984CcMssA1r1XZOxOT2jf5dC', 'michael.j@yahoo.fr'),
+(8, 'Manudu95', '$2y$10$Fan/vwvL6bi51/7br6At7eBsDiGWkOgzYTCcUgvPn2DuTnAnDb6mi', 'manudu95@gmail.com'),
+(9, 'idtest', '$2y$10$6MXYsgS1ojH/tm8azDPAnej8n78T/9Py2kl9EwUa6saULAaVe2rFS', 'test@gmail.com');
 
 -- --------------------------------------------------------
 
