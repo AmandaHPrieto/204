@@ -43,7 +43,7 @@
                             </div>
                         </div>'	;
                     }
-                    if ($_SESSION["connect"]===1){
+                    if ($_SESSION["connect"]==1){
                         echo 'Vous êtes connecté';
                         echo '<div class=form-bottom >
                         <input type="submit" value="Me déconnecter" class="button">
@@ -53,11 +53,11 @@
                 ?>
 
             </fieldset>
-</form>
+        </form>
         </div>
         <div id="#compte-existant">
-                <p>Vous n'avez pas un compte chez nous ?</p>
-                <a href="inscription.php" title="J'accède à la page de connexion.">S'inscrire</a>
+            <p>Vous n'avez pas un compte chez nous ?</p>
+            <a href="inscription.php" title="J'accède à la page de connexion.">S'inscrire</a>
         </div>
 
         <?php
@@ -107,7 +107,7 @@
 
                 $_SESSION["Utilisateur"]=array();
 
-                $_SESSION["connect"]=0;
+                $_SESSION["connect"];
 
                 include 'inc.functions.php';
 
@@ -121,6 +121,8 @@
                         echo "<br>";                       
                         echo $pass;
                         echo "<br>";
+                        $passhache=password_hash($pass, PASSWORD_DEFAULT);
+
             
                         //vérifications login :
                         for ($i=0; $i<$nbclients; $i++){
@@ -131,7 +133,8 @@
                                     $utilisateur=array($login, $pass);
                                     array_push ($_SESSION["Utilisateur"], $utilisateur);
                                     echo "Vous êtes connecté";
-                                    $_SESSION["connect"]=1;                                 
+                                    $_SESSION["connect"]=1;   
+                                    //echo $_SESSION["connect"];                              
                                     break;
                                 }else{
                                     echo "Mot de passe incorrect.";
