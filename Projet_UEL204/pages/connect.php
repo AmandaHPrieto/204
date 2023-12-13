@@ -21,26 +21,39 @@
         <h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
         <h2 class="row around">Page de connexion</h2>
         <a href="../index.php" class="row around">Retour à l'accueil</a>
-        <div class="form">
+        <form method="POST" action="connect.php" class="form">
             <fieldset>
-				<legend>Connectez-vous !</legend>
-                <div class="form-box">
-                    <div class="form-top row around"> 
-                        <div class="form-login row">
-                            <label for="login">Identifiant</label>
-                            <input type="text" name="login" id="login"></br>
-                        </div>
-                        <div class="form-login row">
-                            <label for="pass">Mot de passe</label>
-                            <input type="text" name="pass" id="pass"></br>
-                        </div>
+                <?php 
+                    if ($_SESSION["connect"]==0){
 
-                        <div class=form-bottom >
-                            <input type="submit" value="Me connecter" class="button">
-                        </div>
-                    </div>	
+                        echo '<legend>Connectez-vous !</legend>
+                        <div class="form-box">
+                        <div class="form-top row around"> 
+                            <div class="form-login row">
+                                <label for="login">Identifiant</label>
+                                <input type="text" name="login" id="login"></br>
+                            </div>
+                            <div class="form-login row">
+                                <label for="pass">Mot de passe</label>
+                                <input type="text" name="pass" id="pass"></br>
+                            </div>
+
+                            <div class=form-bottom >
+                                <input type="submit" value="Me connecter" class="button">
+                            </div>
+                        </div>'	;
+                    }
+                    if ($_SESSION["connect"]===1){
+                        echo 'Vous êtes connecté';
+                        echo '<div class=form-bottom >
+                        <input type="submit" value="Me déconnecter" class="button">
+                        </div>';
+
+                    }
+                ?>
 
             </fieldset>
+</form>
         </div>
         <div id="#compte-existant">
                 <p>Vous n'avez pas un compte chez nous ?</p>
@@ -70,11 +83,7 @@
                         'Motdepasse' => $data_utilisateurs['motdepasse'],
                     );
 
-                    //print_r ($client);
-
                     array_push($clients, $client);
-
-                    //echo 'Id : '.$data_utilisateurs['id'].' - Identifiant : '.$data_utilisateurs['identifiant'].' - Mot de passe : '.$data_utilisateurs['motdepasse'].'<br>';
 
                     }
                 }
@@ -82,11 +91,15 @@
                 // fin de parcours de la BDD
                 $requete->closeCursor();
 
-                print_r ($clients);
-                echo "<br><br>";
-                echo $clients[0]['Motdepasse'];
-                echo "<br><br>";
-                echo count($clients);
+                //print_r ($clients);
+                //echo "<br><br>";
+                //echo $clients[0]['Identifiant'];
+                //echo "<br>";
+                //echo $clients[0]['Motdepasse'];
+                //echo "<br><br>";
+                $nbclients= count($clients);
+                //echo "nb clients : ".$nbclients;
+                //echo "<br><br>";
 
 
              /* Login
@@ -94,31 +107,67 @@
 
                 $_SESSION["Utilisateur"]=array();
 
+                $_SESSION["connect"]=0;
 
-                function fonctionVerifLoginMdp(){
+                include 'inc.functions.php';
+
+                function fonctionVerifLoginMdp($clients, $nbclients){
                     //vérif de transmission du formulaire
-                    if(isset($_GET) && count($_GET)>1){
-                        $login = $_GET["login"];
+                    if(isset($_POST) && count($_POST) && $_SESSION["connect"]===0){
+                        $login = $_POST["login"];
+                        $pass = $_POST["pass"];
+                        echo "bouton cliqué<br>";
                         echo $login;
-                        $pass = $_GET["pass"];
+                        echo "<br>";                       
                         echo $pass;
-
+                        echo "<br>";
+            
                         //vérifications login :
-                        for ($i=0; $i<count($clients); $i++){
-                            if ($login == $clients[$i]['Identifiant']){
+                        for ($i=0; $i<$nbclients; $i++){
+                            if ($login === $clients[$i]['Identifiant']){
                                 // vérif mdp :
-                                if ($pass == $clients[$i]['Mot de passe']){
+                                if ($pass === $clients[$i]['Motdepasse']){
+                                    //echo $clients[$i]['Motdepasse'];
                                     $utilisateur=array($login, $pass);
                                     array_push ($_SESSION["Utilisateur"], $utilisateur);
                                     echo "Vous êtes connecté";
+                                    $_SESSION["connect"]=1;                                 
+                                    break;
                                 }else{
                                     echo "Mot de passe incorrect.";
+                                    $_SESSION["connect"]=0;
                                 }
                             }
                         }
-
+                    }
+                    if(isset($_POST) && count($_POST) && $_SESSION["connect"]===1){
+                        //setDeconnecte();
+                        session_destroy();
+                        unset($_SESSION);
+                        //header('Location: ../index.php');
+                        exit;
                     }
                 }
+             
+                fonctionVerifLoginMdp($clients, $nbclients) ;
+
+                echo "<br>";
+                echo($_SESSION["Utilisateur"][0][0]); 
+                echo "<br>";
+                echo($_SESSION["Utilisateur"][0][1]);
+                echo "<br>";
+                echo $_SESSION["connect"];
+
+                // redirection vers la page index si connecté
+                /*if ($_SESSION["connect"] === 1){
+                    header('Location: ../index.php');
+                    exit();
+                }*/
+
+                
+
+                
+                
 
         ?>
     </body>

@@ -506,3 +506,33 @@ Stack trace:
 [10-Dec-2023 19:59:53 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
 [10-Dec-2023 19:59:53 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
 >>>>>>> Stashed changes
+[13-Dec-2023 10:33:00 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 27
+[13-Dec-2023 10:33:00 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 46
+[13-Dec-2023 10:33:00 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:33:00 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:33:00 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 155
+[13-Dec-2023 10:33:00 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 155
+[13-Dec-2023 10:33:00 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 157
+[13-Dec-2023 10:33:00 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 157
+[13-Dec-2023 10:33:24 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:33:24 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:33:24 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 155
+[13-Dec-2023 10:33:24 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 155
+[13-Dec-2023 10:33:24 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 157
+[13-Dec-2023 10:33:24 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 157
+[13-Dec-2023 10:33:35 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:33:35 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:34:09 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 27
+[13-Dec-2023 10:34:09 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 46
+[13-Dec-2023 10:34:09 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:34:09 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:34:12 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 27
+[13-Dec-2023 10:34:12 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 46
+[13-Dec-2023 10:34:12 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:34:12 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:34:12 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 155
+[13-Dec-2023 10:34:12 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 155
+[13-Dec-2023 10:34:12 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 157
+[13-Dec-2023 10:34:12 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 157
+[13-Dec-2023 10:34:17 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
+[13-Dec-2023 10:34:17 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
