@@ -23,6 +23,7 @@
 			$_SESSION['favoris'] = array();
 		}
 		$_favori = array(
+	
 			'adresse' =>	htmlspecialchars($adresse),
 			'ville' =>	htmlspecialchars($ville),
 			'categorie' =>	htmlspecialchars($categorie),
@@ -31,11 +32,9 @@
 		);
 	
 		array_push($_SESSION['favoris'], $_favori);
-	
+		
 	}
 	
-
-
 	/*
 		Fonction isConnecte
 		Permet de vérifier qu'un utilisateur est connecté
@@ -74,11 +73,16 @@
 		exit;
 	}
 
+	/*function addMessage () {
+		header('Location: index.php');
+		echo "Excellent choix : nous l'avons bien ajouté à vos favoris!";
+	}*/
+
 	/*
 		Fonction addMessageAlert
 		Ajoute un message en session qui sera affiché 
 	*/
-	function adddMessageAlert($msg = ""){
+	function addMessageAlert($msg = ""){
 		if(!array_key_exists('msg', $_SESSION)){
 			$_SESSION['msg'] = "";
 		}
@@ -97,31 +101,29 @@
 			unset($_SESSION['msg']);
 		}
 	}
-
-	/*function getArticleInfoFromJson($id_article){
-		$contenu_fichier = file_get_contents('articles.json');
-		$_articles       = json_decode($contenu_fichier, true);
-
-		if($_articles && !is_null($_articles) && count($_articles) > 0){
-			foreach($_articles as $article){
-				if($article['ref'] == $id_article){
-					return $article;
-				}
-			}
-		}
-		return false;
-	}
-*/
+	
 
 // Fonction pour afficher les résultats d'une recherche
 function recherche(){
 	// On rend la variable bdd globale
 	global $bdd;
-	
-	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ville'], $_POST['surface'], $_POST['budget'])) {
-		$requete = $bdd->prepare('SELECT * FROM logements WHERE ville = ? AND surface > ? AND prix < ? ORDER BY prix ASC');
-		$requete->execute(array($_POST['ville'], $_POST['surface'], $_POST['budget']));
+	//if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ville'], $_POST['surface'], $_POST['budget'])) à voir si on l'utilise 
+	$requete ='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND surface > "'.$_POST['surface'].'" AND prix < "'.$_POST['budget'].'"'; //visiblement si le input surface n'est pas rempli c'est pas grave pour la recherche??? 
+	$param_categ = ''; //les checkbox porte le meme nom mais une valeur différente (appartement ou maison): leur nom est un déclaré comme un tableau. 
+//ainsi les valeurs cochées seront transmises sous forme de tableau que l'on pourra parcourir pour les récupérer. (super pratique car tu peux avoir autant de valeurs que tu veux! On peut mettre des péniches et des yourtes aussi!)
 		
+	foreach($_POST['categorie'] as $valeur ) { //on parcourt les valeurs de notre tableau de retours checkbox.
+		$param_categ .= 'categorie="'.$valeur.'" OR '; 
+	}
+	//echo $param_categ; je te laisse le echo comme ça tu vois l'apercu. 
+	if($param_categ != '' ) {
+		$requete .= ' AND ('.substr($param_categ, 0, -4).')'; // on retire le OR qui va s'ajouter à la fin de la boucle
+	}
+
+	//echo $requete;  en faisant cela on peut récupérer la requete et la tester dans l'ongler sql de php my admin directement.
+	$requete=$bdd->prepare($requete);
+	$requete->execute();
+
 		while ($logement = $requete->fetch()){
 			if (!$logement) // On teste si la réponse à la requête est vide.
 			{
@@ -131,61 +133,67 @@ function recherche(){
 			else
 			{
 				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
-				if (isConnecte()){
-				echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
-			}
-				
+				//if (isConnecte()){
+				echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+				//}
 				$adresse=$logement['adresse'];
 				$ville=$logement['ville'];
-				$type=$logement['type'];
+				$categorie=$logement['categorie'];
 				$surface=$logement['surface'];
 				$prix=$logement['prix'];
 				$logement=array();
 				$logements=array();
-				array_push($logement,  $adresse, $ville, $type,''.$surface.'m2, '.$prix.'€');
+				array_push($logement,  $adresse, $ville, $categorie,''.$surface.'m2, '.$prix.'€');
 				array_push($logements, $logement);	
 			}
-	
+
 			foreach($logements as $logement) {
 				echo '</br>';
-				foreach($logement as $element) {
-					echo ''.$element.' </br>';
-				}
+					foreach($logement as $element) {
+						echo ''.$element.' </br>';
+					}	
 			}
-	
 		}
-		
-		$requete->closeCursor();
-	}
-}
+	$requete->closeCursor();	
+};
 
 
 //fonction ajout fav
-function ajoutFav(){
+function addFavori(){ 
 	// On rend la variable bdd globale
 	global $bdd;
+
 	if($_GET && count($_GET)){
 	
 		if(array_key_exists('logement', $_GET) && !empty($_GET['logement'])){
 			$id=$_GET['logement'];
-			$request = $bdd->query('SELECT * FROM logements WHERE id='.$id.'');
+			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id.'');
 	
 			while ($id = $request->fetch()){
 				$adresse=$id['adresse'];
 				$ville=$id['ville'];
-				$type=$id['type'];
-				$surface=$id['surface'].'m2';
-				$prix=$id['prix'].'€';
+				$categorie=$id['categorie'];
+				$surface=$id['surface'];
+				$prix=$id['prix'];
 	
 				favorisInSession();
-				addFavoriToSession( $adresse, $ville,$type, $surface, $prix);
-	
-				//adddMessageAlert("Produit ajouté !");
-				header('Location: resultats.php');
-				exit;
+				addFavoriToSession($adresse, $ville,$categorie, $surface, $prix);
 			}
 		}
-	}
+	} 
+$requete->closeCursor();	
 }
+  /* $file_write='mesfavoris.txt';
+    $write=fopen($file_write, 'a');
+    foreach ($_SESSION['favoris'] as $_favori)
+        {
+        file_put_contents($file_write, $_favori PHP_EOL, FILE_APPEND);
+        }
+     fclose($write);
+                    
+    $_file_read='mesfavoris.txt';
+    $read=fopen($file_read,'r');
+     $text= file_get_contents('mesfavoris.txt');
+    echo $text;*/
 
 ?>

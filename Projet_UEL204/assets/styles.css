@@ -87,7 +87,8 @@ ul {
 }
 
 .bandeau a:hover {
-  border: .5px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 2rem
 }
 
 
@@ -128,7 +129,11 @@ fieldset {
   font-size: 1.5rem; 
   border: 3px solid goldenrod
 }
-
+.resultats {
+max-height:100%;
+height: 100%;
+border: 3px solid goldenrod;
+}
 legend {
   font-weight: bold;
 }
