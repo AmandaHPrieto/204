@@ -87,7 +87,8 @@ ul {
 }
 
 .bandeau a:hover {
-  border: .5px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 2rem;
 }
 
 
