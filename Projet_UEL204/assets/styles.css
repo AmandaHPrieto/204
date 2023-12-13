@@ -45,12 +45,6 @@ ul {
     justify-content: center;
 }
 
-/* page résultats */
-.button {
-  border: 3px solid goldenrod;
-  padding: 1rem;
-  width: 5rem;
-}
 /*menu*/
 
 .bandeau div{
@@ -64,6 +58,7 @@ ul {
   text-decoration: none;
   color: #ffffff;
 }
+
 /*favoris*/ 
 
 .favoris-box {
@@ -72,7 +67,19 @@ ul {
 .card-fav  {
   border : 1px solid goldenrod;
 }
+
 /*footer*/
+
+
+
+/*************PAGE RESULTATS*************/
+/* page résultats */
+.button {
+  border: 3px solid goldenrod;
+  padding: 1rem;
+  width: 5rem;
+}
+
 
 
 /*************PAGE RECHERCHE FORMULAIRE*************/
