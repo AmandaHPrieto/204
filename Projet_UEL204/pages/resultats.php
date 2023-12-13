@@ -26,7 +26,6 @@
 	exit;
 	}
 	
-
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +73,6 @@ $param_categ = ''; //les checkbox porte le meme nom mais une valeur différente 
 	
 
 
-
 	/* On va traiter la réponse ($requete) entrée par entrée avec une boucle while.
 	   On va aller chercher (=> fetch) chaque entrée de la table successivement et on va stocker les valeurs
 	   dans un tableau associatif $data qui contient les valeurs de chaque champ pour toutes les entrées.
@@ -87,6 +85,7 @@ $param_categ = ''; //les checkbox porte le meme nom mais une valeur différente 
 			break;
 		}
 		else
+
 		{
 			/*ajouter ici la condition if (isConnecte())*/
 			echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
