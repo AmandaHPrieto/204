@@ -10,6 +10,7 @@
 			$request = ('SELECT * FROM logements WHERE id='.$id.'');
 	
 			while ($id = $request->fetch()){
+				$photo=$id['photo'];
 				$adresse=$id['adresse'];
 				$ville=$id['ville'];
 				$categorie=$id['categorie'];
@@ -90,6 +91,7 @@ $param_categ = ''; //les checkbox porte le meme nom mais une valeur différente 
 			/*ajouter ici la condition if (isConnecte())*/
 			echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
 			
+			$photo=$logement['photo'];
 			$adresse=$logement['adresse'];
 			$ville=$logement['ville'];
 			$categorie=$logement['categorie'];
@@ -97,7 +99,7 @@ $param_categ = ''; //les checkbox porte le meme nom mais une valeur différente 
 			$prix=$logement['prix'];
 			$logement=array();
 			$logements=array();
-			array_push($logement,  $adresse, $ville, $categorie,''.$surface.'m2, '.$prix.'€');
+			array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.'m2, '.$prix.'€');
 			array_push($logements, $logement);	
 		}
 

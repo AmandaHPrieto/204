@@ -23,6 +23,7 @@
 			$_SESSION['favoris'] = array();
 		}
 		$_favori = array(
+			'photo' => htmlspecialchars($photo),
 			'adresse' =>	htmlspecialchars($adresse),
 			'ville' =>	htmlspecialchars($ville),
 			'categorie' =>	htmlspecialchars($categorie),
@@ -70,7 +71,7 @@
 	function setDeconnecte(){
 		session_destroy();
 		unset($_SESSION);
-		header('Location: ../index.php');
+		header('Location: ./connect.php');
 		exit;
 	}
 
@@ -134,7 +135,7 @@ function recherche(){
 				if (isConnecte()){
 				echo '<a href="?logement='.$logement['id'].'"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
 			}
-				
+				$photo=$logement['photo'];
 				$adresse=$logement['adresse'];
 				$ville=$logement['ville'];
 				$type=$logement['type'];

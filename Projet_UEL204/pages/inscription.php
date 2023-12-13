@@ -54,7 +54,9 @@ include '../inc.functions.php';
     </section>
 
     <?php else: ?>
-                Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).
+                <p>Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).</p>
+                <a href="./deconnect.php" title="Deconnexion">Se déconnecter</a>
+                <a href="../index.php" class="row around">Retour à l'accueil</a>
             <?php endif; ?>
 </body>
 </html>
