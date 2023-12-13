@@ -6,8 +6,6 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 88
-<<<<<<< Updated upstream
-=======
 [08-Dec-2023 12:46:11 UTC] PHP Warning:  Use of undefined constant fonctionVerifLoginMdp - assumed 'fonctionVerifLoginMdp' (this will throw an Error in a future version of PHP) in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 119
 [08-Dec-2023 12:48:59 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 93
 [08-Dec-2023 12:49:17 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 93
@@ -505,7 +503,6 @@ Stack trace:
 [10-Dec-2023 19:59:53 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 138
 [10-Dec-2023 19:59:53 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
 [10-Dec-2023 19:59:53 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 140
->>>>>>> Stashed changes
 [13-Dec-2023 10:33:00 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 27
 [13-Dec-2023 10:33:00 UTC] PHP Notice:  Undefined index: connect in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 46
 [13-Dec-2023 10:33:00 UTC] PHP Warning:  include(inc.functions.php): failed to open stream: No such file or directory in C:\MAMP\htdocs\L204_GIT_projet\204\Projet_UEL204\pages\connect.php on line 112
