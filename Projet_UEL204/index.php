@@ -1,7 +1,14 @@
 <?php	
     //démarrage session
     session_start();
+	include 'pages/inc.connexion.php';
+	include './inc.functions.php';
+	ini_set('display_errors', 'Off');
+	ini_set('log_errors', 'On');
+	ini_set('error_log', dirname(__file__) . '/log_error_index_php.txt');
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,15 +25,29 @@
 
 	<body>
 
+
 		<header class="bandeau ">
-			<?php 
-			include('menu.php');
-			?>
+			<div class="row space align-center">
+
+				<img class="header-logo" src="assets/images/logo.png" alt="logo-airphp">
+
+				<nav>
+					<ul>
+						<li><a href="index.php">Accueil</a></li>
+						<li><a href="pages/mes_favoris.php">Mes favoris</a></li>
+						<li><a href="pages/connect.php">Me connecter</a></li>
+						<li><a href="pages/inscription.php">M'inscrire</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
 		</header>
+
 <section>
 	<h1>AirPHP: les bonnes bases pour votre maison!</h1>
 	<div class="form">
-		<form method="POST" action="pages/resultats.php">
+		<form method="POST" action="index.php">
 			<fieldset>
 		 	 	<legend>Que recherchez vous?</legend>
 			<div class="form-box">
@@ -80,6 +101,22 @@
 			</form>
 		</div>
 </section>
+
+<section>
+	<div>
+		<fieldset class="resultats">
+		<legend><strong>Résultats de vos recherches</strong></legend>
+
+		<?php
+			
+			recherche();
+			addFavori();
+
+
+
+		?>
+		</fielset>
+	<div>
 
 		<div class="connect">
 			<a href="pages/connect.php">Connexion</a>
