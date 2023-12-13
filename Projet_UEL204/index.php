@@ -1,8 +1,7 @@
-<?php 
-session_start()
-
+<?php	
+    //démarrage session
+    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
