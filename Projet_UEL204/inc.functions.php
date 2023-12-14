@@ -132,9 +132,10 @@ function recherche(){
 			}
 			else
 			{
+				echo '<div class="conteneur-maison">';
 				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
 				if (isConnecte()){
-					echo '<div class="conteneur-maison">';
+					
 					echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
 				}
 				$photo='<img class="img-maison" src="assets/photos/'.$logement['photo'].'">';
