@@ -134,26 +134,30 @@ function recherche(){
 			{
 				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
 				if (isConnecte()){
+				echo '<div class="conteneur-maison">';
 				echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
 			}
-				$photo=$logement['photo'];
+				$photo='<img src="assets/photos/'.$logement['photo'].'">';
 				$adresse=$logement['adresse'];
-				$ville=$logement['ville'];
-				$categorie=$logement['categorie'];
-				$surface=$logement['surface'];
-				$prix=$logement['prix'];
+				$ville='<span class="span-ville">'.$logement['ville'].'</span>';
+				$categorie='<span class="span-categorie">'.$logement['categorie'].'</span>';
+				$surface='<span class="span-surface">'.$logement['surface'].' m2</span>';
+				$prix='<span class="span-prix">'.$logement['prix'].' €</span>';
 				$logement=array();
 				$logements=array();
-				array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.'m2, '.$prix.'€');
+				array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.$prix);
 				array_push($logements, $logement);	
 			}
+			echo '<div class="conteneur-infos-maison">';
 
 			foreach($logements as $logement) {
-				echo '</br>';
+				
 					foreach($logement as $element) {
 						echo ''.$element.' </br>';
 					}	
+				
 			}
+			echo '</div></div>';
 		}
 	$requete->closeCursor();	
 };
