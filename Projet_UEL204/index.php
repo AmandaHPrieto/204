@@ -53,20 +53,22 @@
 			<div class="form-box">
 				<div class="form-top row around">
 		  			<div class="form-type row">
-						<label for="cat-maison">Maison</label>
-						<input type="checkbox" name="categorie[]" id="cat-maison" value="maison"></br>
-						<label for="cat-appartement">Appartement</label>
-						<input type="checkbox" name="categorie[]" id="cat-appartement" value="appartement" ></br>
+						<div>
+						<label for="cat-maison">Maison<input  class="form-input" type="checkbox" name="categorie[]" id="cat-maison" value="maison"></br></label>
+						</div>
+						<div>
+						<label for="cat-appartement">Appartement<input  class="form-input" type="checkbox" name="categorie[]" id="cat-appartement" value="appartement" ></br></label>
+						</div>
 		  			</div>
 					
 					<div class="form-surface row">
 						<label for="surface">Surface en m2</label>
-						<input type="text" name="surface" id="surface"></br>
+						<input class="form-input" type="text" name="surface" id="surface"></br>
 					</div>
 
 					<div class="form-city row">
 						<label for="ville">Saisissez la ville où vous recherchez</label>
-							<select id="ville" name="ville">
+							<select class="form-input" id="ville" name="ville">
 								<option value=""></option>
 								<option value="Limoges">Limoges</option>
 								<option value="Panazol">Panazol</option>
@@ -82,7 +84,7 @@
 
 						<div class="form-budget row">
 							<label for="budget">Votre budget</label>
-								<select id="budget" name="budget">
+								<select class="form-input" id="budget" name="budget">
 									<option value="">Veuillez indiquer votre budget</option>
 									<option value="100000">100000€</option>
 									<option value="150000">150000€</option>

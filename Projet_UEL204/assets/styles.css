@@ -146,6 +146,12 @@ footer{
 
 
 /*************PAGE RECHERCHE FORMULAIRE*************/
+.form-input {
+  border-radius: 2rem;
+  border: .5px solid var(--secondary-color);
+  padding: .5rem 2rem;
+  text-align: center;
+}
 
 /*.form {
 max-width: 75%;
