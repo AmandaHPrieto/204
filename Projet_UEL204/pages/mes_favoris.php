@@ -1,26 +1,21 @@
 <?php 
     //~ On initialise ou relaye la session
     session_start();
+    //~ On va chercher notre fichier PHP contenant des définitions de fonctions utilisées plusieurs fois
    include '../inc.functions.php';
     /*création log erreur*/
 
 	ini_set('display_errors', 'Off');
 	ini_set('log_errors', 'On');
 	ini_set('error_log', dirname(__file__) . '/log_error_mes_favoris.txt');
-    
-    //~ On va chercher notre fichier PHP contenant des définitions de fonctions utilisées plusieurs fois
-
 
     //~ Utilisateur non connecté : on redirige
-   //if(!isConnecte()){
+   if(!isConnecte()){
         //~ Message de demande de connexion
-      //  adddMessageAlert("Vous devez d'abord vous connecter.");
-       // header('Location: connect.php'); 
-   // } s'agit il d'une redirection vers la page de connexion??*/ 
+    echo("Vous devez vous connecter ou vous inscrire pour accéder à cette page.");
+       header('Location: connect.php');
+    }
 
-
-
-   
 
 ?>
 <!DOCTYPE html>
