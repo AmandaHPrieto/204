@@ -32,7 +32,7 @@
                         //~ Des données issues d'un formulaire de connexion sont transmises
                         setConnecte($_POST['login'], $hash);
                     } else {
-                        addMessageAlert("Identifiant ou mot de passe incorrect");
+                        addMessageAlert("<p>⚠️ Identifiant ou mot de passe incorrect !</p>");
                     }
 
 
@@ -56,50 +56,67 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="body-connect">
         <header class="bandeau ">
             <?php include('../menu.php'); ?>
         </header>
 
-        <h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
-        <h2 class="row around">Page de connexion</h2>
-        <a href="../index.php" class="row around">Retour à l'accueil</a>
+        <section class="section-inscription background-connexion">
 
-
-
-        <?php lireEtSupprimeMessageSession();?>
 
             <?php if(!isConnecte()) : ?>
-                <div id="#compte-existant">
-            <p>Vous n'avez pas un compte chez nous ?</p>
-            <a href="inscription.php" title="J'accède à la page d'inscription.">S'inscrire</a>
-        </div>
+
+                <h1 class="h1-connect">On trouve la maison de vos rêves</h1>
+                <h2 class="h2-connect"> Et ce ne sont pas des paroles en l'air</h2>
+
 
                 <form method="POST">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Login" name="login" required>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Mot de passe" name="mdp" required>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary mb-2">Se Connecter</button>
-                        </div>
-                    </div>
+                    <fieldset>
+                    <legend class="inscription-form-legend"> Connectez-vous ! </legend>
+                        
+                    <p class="inscription-form-item">
+                            
+                                <input type="text" class="inscription-form-input" placeholder="Identifiant" name="login" required>
+                            
+                    </p>
+                        
+                    <p class="inscription-form-item">
+                            
+                                <input type="password" class="inscription-form-input" placeholder="Mot de passe" name="mdp" required>
+                            
+                    </p>
+                        
+                    <p class="inscription-form-item">
+                            <button type="submit" class="button">Connexion</button>
+                    </p>
+
+                    <?php lireEtSupprimeMessageSession();?>
+                    
+                </fieldset>
+
+                <div class="compte-existant">
+                <p>Vous n'avez pas de compte chez nous ?</p>
+                <a href="inscription.php" title="J'accède à la page d'inscription.">S'inscrire</a>
+                </div>
+
                 </form>
+                
+
             <?php else: ?>
-                <p>Bonjour <?php echo $_SESSION['login']; ?> !</p>
-                <a href="./deconnect.php" title="Deconnexion">Se déconnecter</a>
+                
+
+                <div class="white-background">
+                <p class="inscription-form-legend">👋 Bonjour <?php echo $_SESSION['login']; ?> !</p>
+                </div>
+                <a class="button" href="./deconnect.php" title="Deconnexion">Déconnexion</a>
+
+                
+
+                
+            
             <?php endif; ?>
 
-
-
-        ?>
+            </section>
 
         <?php include('../footer.php'); ?>
 
