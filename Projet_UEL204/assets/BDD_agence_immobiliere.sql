@@ -71,7 +71,7 @@ CREATE TABLE `logements` (
 
 INSERT INTO `logements` (`id`, `adresse`, `ville`, `categorie`, `surface`, `prix`, `photo`) VALUES
 (1, '12 avenue Albert Thomas, 87000 Limoges', 'Limoges', 'appartement', 67, 175000, 'appartThomas.jpg'),
-(2, '3 avenue de Landouge, 87100 Limoges', 'Limoges', 'maison', 137, 230000, 'mainsonLandouge.jpg'),
+(2, '3 avenue de Landouge, 87100 Limoges', 'Limoges', 'maison', 137, 230000, 'maisonLandouge.jpg'),
 (3, '7 rue d` Alsace, 87220 Feytiat', 'Feytiat', 'appartement', 48, 90000, 'appartAlsace.jpg'),
 (4, '47 avenue du Limousin, 87220 Feytiat', 'Feytiat', 'maison', 98, 182000, 'maisonLimousin.jpg'),
 (5, '31 rue de la Garde, 87270 Couzeix', 'Couzeix', 'maison', 75, 190000, 'maisonGarde.jpg'),

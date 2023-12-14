@@ -202,7 +202,7 @@ padding-right: 2rem;
 
 
 
-/*************ZONE RESULTATS SUR PAGE INDEX*************/
+/*************ZONE RESULTATS SUR PAGE INDEX et PAGE MES FAVORIS*************/
 .resultats{
   margin: 5rem;
   display: flex;
@@ -219,7 +219,7 @@ padding-right: 2rem;
   align-items: center;
 }
 
-.conteneur-infos-maison > img{
+.img-maison{
   border-radius: 2rem;
   max-width: 30vw;
   margin: 1rem;
@@ -251,6 +251,10 @@ padding-right: 2rem;
 .span-prix{
   color: var(--secondary-color);
 }
+
+
+
+
 
 
 .section-inscription{

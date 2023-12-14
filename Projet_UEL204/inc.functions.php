@@ -23,12 +23,12 @@
 			$_SESSION['favoris'] = array();
 		}
 		$_favori = array(
-			'photo' => htmlspecialchars($photo),
-			'adresse' =>	htmlspecialchars($adresse),
-			'ville' =>	htmlspecialchars($ville),
-			'categorie' =>	htmlspecialchars($categorie),
-			'surface'=> htmlspecialchars($surface),
-			'prix'  =>	htmlspecialchars($prix)
+			'photo' => ('<img class="img-maison" src="../assets/photos/'.$photo.'">'),
+			'adresse' =>	($adresse),
+			'ville' =>	('<span class="span-ville">'.$ville.'</span>'),
+			'categorie' =>	('<span class="span-categorie">'.$categorie.'</span>'),
+			'surface'=> ('<span class="span-surface">'.$surface.'</span>'),
+			'prix'  =>	('<span class="span-prix">'.$prix.'</span>')
 		);
 	
 		array_push($_SESSION['favoris'], $_favori);
@@ -134,10 +134,10 @@ function recherche(){
 			{
 				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
 				if (isConnecte()){
-				echo '<div class="conteneur-maison">';
-				echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
-			}
-				$photo='<img src="assets/photos/'.$logement['photo'].'">';
+					echo '<div class="conteneur-maison">';
+					echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+				}
+				$photo='<img class="img-maison" src="assets/photos/'.$logement['photo'].'">';
 				$adresse=$logement['adresse'];
 				$ville='<span class="span-ville">'.$logement['ville'].'</span>';
 				$categorie='<span class="span-categorie">'.$logement['categorie'].'</span>';

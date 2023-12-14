@@ -44,7 +44,7 @@
                 <h1 class="favoris row">Vos annonces sauvegardées</h1>
                 
         </div>
-     <div>
+        <div class="resultats">
                 <?php  
                 
                 if(!favorisInSession()){
@@ -52,10 +52,14 @@
                  }
                  else {
                        foreach($_SESSION['favoris'] as $_favori){ 
-                       echo '<div class="card-fav"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></br></div>';
-                       foreach($_favori as $element) {
-                        echo ''.$element.'</br>';
-                        }
+                            echo '<div class="conteneur-maison">';
+                            echo '<div class="card-fav"><img src="../assets/images/favoris.png" width="30px" alt="favoris "></br></div>';
+                            echo '<div class="conteneur-infos-maison">';
+                            foreach($_favori as $element) {
+                                echo ''.$element.'</br>';
+                            }
+                            
+                            echo '</div></div>';
                         }
                      };
                  ?>
