@@ -108,11 +108,8 @@
                 <div class="white-background">
                 <p class="inscription-form-legend">👋 Bonjour <?php echo $_SESSION['login']; ?> !</p>
                 </div>
-                <a class="button" href="./deconnect.php" title="Deconnexion">Déconnexion</a>
+                <a class="bouton-deconnexion" href="./deconnect.php" title="Deconnexion">Se déconnecter</a>
 
-                
-
-                
             
             <?php endif; ?>
 
