@@ -24,8 +24,10 @@ html {
 }
 
 h1{
-  margin: 2rem;
+margin: 0.75rem;
 text-align: center;
+color: var(--primary-color);
+font-family: var(--primary-font);
 font-size: 3rem;
 }
 
@@ -41,9 +43,9 @@ p{
 .row {
   display: flex;
   flex-direction: row; 
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
+ /* max-width: 80rem; /* revoir l'attribution de param autre que le flex sur row...*/
+ /* margin-left: auto;
+  margin-right: auto;*/
 }
 
 .around {
@@ -55,15 +57,22 @@ p{
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.column {
+  display: flex; 
+  flex-direction: column;
+}
+.align-around {
+  display: flex;
+  align-content: space-around;
+}
+
 .align-center {
     align-items: center;
 }
-
-.justify-center {
-    justify-content: center;
-  
-}
-
 /*menu*/
 .bandeau{
     background-color: var(--primary-color);
@@ -144,101 +153,68 @@ footer{
   padding: .5rem 2.5rem;
 }
 
-
-
 /*************PAGE RECHERCHE FORMULAIRE*************/
 .section-recherche {
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+padding: 2rem 0rem;
 background: transparent url(images/photo-bandeau.png) center no-repeat;
 background-size: cover;
 background-position: 60% 10%;
-padding: 2rem 0rem;
+}
+
+.form-search {
+  padding: .5rem 1rem;
+  margin: 1.5rem 0rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--white-color);
+}
+
+
+.form-legend {
+padding-top: 1rem;
+text-align: center;
+font-family: var(--primary-font);
+font-size: 2rem;
+color: var(--primary-color);
+}
+
+.form-bottom-line {
+  padding: 1.5rem;
 }
 
 .form-input {
+  padding: .5rem 0.75rem;
+  margin-left: .5rem;
   border-radius: 2rem;
-  border: .5px solid var(--secondary-color);
-  padding: .5rem 1rem;
+  border: .5px solid var(--secondary-color); 
   text-align: center;
+  background-color: var(--white-color);
 }
-
-.form-input-small {
+  
+.small {
   width: 5rem;
-  border-radius: 2rem;
-  border: .5px solid var(--secondary-color);
-  padding: .5rem 1rem;
-  text-align: center;
-
 }
-.form-input-med {
-  width: 15em;
-  border-radius: 2rem;
-  border: .5px solid var(--secondary-color);
-  padding: .5rem 1rem;
-  text-align: center;
+.med {
+  width: 13rem;
+}
+.big {
+ width : 15rem;
+ padding: 0.75rem;
 }
 
 .form-item {
-  padding: .5rem 2rem;
+  padding: .5rem 1.5rem;
   font-family: var(--secondary-font);
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
-/*.form {
-max-width: 75%;
-margin : auto;
-margin-top: 3rem;
+.line {
+  margin-top: 1rem;
 }
- 
-fieldset {
-  max-height: 15rem;
-  height: 10rem;
-  font-size: 1.5rem; 
-  border: 3px solid goldenrod
-}
-.resultats {
-max-height:100%;
-height: 100%;
-border: 3px solid goldenrod;
-}
-legend {
-  font-weight: bold;
-}
-
-label {
-  padding-right: 0.75rem;
-}
-.form-type {
-padding-left: 2rem;
-padding-right: 2rem;
-
-}
-
-.form-box {  
-  display: flex;
-  flex-direction : column;
-  align-content:space-between;
-  height: 100%;
-  padding-top: 2rem
-}
-
-
-.form-bottom {
-  margin: auto;
-}
-
-.button {
-
-  padding:0.75rem;
-  border-radius: 20px;
-  background-color:goldenrod;
-
-}*/
 
 
 /*************ZONE RESULTATS SUR PAGE INDEX et PAGE MES FAVORIS*************/
