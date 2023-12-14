@@ -383,3 +383,27 @@ text-align: center;
 .illustration-bienvenue{
   width: 20rem;
 }
+
+/* Page connect
+********************************/
+
+.h1-connect {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+}
+
+.h2-connect {
+  font-family: var(--secondary-font);
+  color: var(--white-color);
+}
+
+.background-connexion {
+  height: 75vh;
+}
+
+.white-background {
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
