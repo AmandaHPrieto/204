@@ -117,13 +117,14 @@ footer{
 }
 
 .footer-social{
-  font-family: var(--primary-font);
+
   color: var(--white-color);
   text-align: center;
 }
 
 .footer-social p{
   margin-bottom: 1rem;
+ font-family: var(--primary-font);
 }
 .footer-social a{
   padding: 2rem 1rem;
@@ -197,10 +198,6 @@ padding-right: 2rem;
 
 }*/
 
-/*************PAGE INSCRIPTION*************/
-
-
-
 
 /*************ZONE RESULTATS SUR PAGE INDEX et PAGE MES FAVORIS*************/
 .resultats{
@@ -255,7 +252,7 @@ padding-right: 2rem;
 
 
 
-
+/*************PAGE INSCRIPTION & POST-INSCRIPTION*************/
 
 .section-inscription{
   display: flex;
@@ -323,13 +320,55 @@ text-align: center;
 
 .compte-existant {
   text-align: center;
-  font-family: var(--tertiary-font);
+  font-family: var(--secondary-font);
   font-size: .6rem;
 }
 
 .inscription-effective{
-  font-family: var(--tertiary-font);
+  font-family: var(--secondary-font);
   text-align: center;
-  margin: 4rem 0rem;
+  margin: 4rem 0rem 1rem 0rem;
 }
 
+.illustration-page-connect{
+  width: 20rem;
+}
+
+.message-inscription-connexion{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bouton-deconnexion{
+   border-radius: 2rem;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  font-family: var(--secondary-font) ;
+  padding: .5rem 2rem;
+  margin-bottom: 3rem;
+}
+
+
+/*post-inscription*/
+
+.bienvenue{
+  text-align: center;
+  margin: 5rem 0rem 2rem 0rem;
+}
+
+.bienvenue p{
+  font-family: var(--secondary-font);
+  margin-bottom: 1.5rem;
+}
+
+.bienvenue a {
+  font-family: var(--tertiary-font);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.illustration-bienvenue{
+  width: 20rem;
+}

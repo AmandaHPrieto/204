@@ -178,7 +178,9 @@ if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
     </header>
 
       <?php if(isConnecte()){
-echo '<br><p>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.<br></p><a href="../index.php" class="row around">Je trouve mon bonheur !</a>';
+echo '<br><div class="bienvenue"><p>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.<br></p><a href="../index.php" class="row around">Je trouve mon bonheur !</a></div>';
+
+echo'<img  class="illustration-bienvenue row" src="../assets/images/illustration-bienvenue.png" alt="maison illustration">';
 }
       ?>
 

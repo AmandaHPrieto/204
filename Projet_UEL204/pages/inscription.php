@@ -62,12 +62,11 @@ include '../inc.functions.php';
 
 
     <?php else: ?>
-
+                <div class="message-inscription-connexion">
                <p class="inscription-effective"> Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).</p>
-
-                <p>Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).</p>
-                <a href="./deconnect.php" title="Deconnexion">Se déconnecter</a>
-                <a href="../index.php" class="row around">Retour à l'accueil</a>
+               <img class="illustration-page-connect row" src="../assets/images/illustration-page-connect.png" alt="illustration profils connectés">
+                <a class="bouton-deconnexion" href="deconnect.php" title="Deconnexion">Se déconnecter</a>
+            </div>
 
             <?php endif; ?>
 
