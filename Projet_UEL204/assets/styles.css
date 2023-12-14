@@ -352,6 +352,11 @@ text-align: center;
 
 /*post-inscription*/
 
+.inscription-erreur{
+  text-align: center;
+  margin: 1rem 0rem .5rem 0rem;
+}
+
 .bienvenue{
   text-align: center;
   margin: 5rem 0rem 2rem 0rem;

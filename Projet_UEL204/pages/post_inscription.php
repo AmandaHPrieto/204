@@ -1,7 +1,26 @@
 <?php
 session_start();
 include '../inc.functions.php';
+?>
 
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <title>Mon inscription</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+      <header class="bandeau ">
+        <?php include('../menu.php'); ?>
+    </header>
+
+<?php
 /***************TRAITEMENT FORMULAIRE INSCRIPTION***************/
 
   //Verification transmission du formulaire
@@ -31,16 +50,16 @@ if(isset($_POST) && count($_POST)){
           $emailValide = strip_tags($email);
           //~On prépare le message final si le paramètre est incorrect
         }else{
-          array_push($_retours, '<p>Votre mail n\'est pas considéré comme valide !</p>');
+          array_push($_retours, '<p class="inscription-erreur" >Votre mail n\'est pas considéré comme valide !</p>');
         }
       }else{
-        array_push($_retours, '<p>Votre mail n\'est pas une chaine de caractère !</p>');
+        array_push($_retours, '<p class="inscription-erreur">Votre mail n\'est pas une chaine de caractère !</p>');
       }
     }else{
-      array_push($_retours, '<p>Votre mail n\'a pas été renseigné !</p>');
+      array_push($_retours, '<p class="inscription-erreur">Votre mail n\'a pas été renseigné !</p>');
     }
   }else{
-    array_push($_retours, '<p>La variable à transmettre n\'existe pas.</p>');
+    array_push($_retours, '<p class="inscription-erreur">La variable à transmettre n\'existe pas.</p>');
   }
 
     //~
@@ -59,13 +78,13 @@ if(isset($_POST) && count($_POST)){
         $userIdValide = strip_tags($userId);
         //~On prépare le message final si le paramètre est incorrect
       }else{
-        array_push($_retours, '<p>La taille de l\'identifiant doit être entre 6 et 20 caractères.<br></p>');
+        array_push($_retours, '<p class="inscription-erreur">La taille de l\'identifiant doit être entre 6 et 20 caractères.<br></p>');
       }
     }else{
-      array_push($_retours, '<p>L\'identifiant n\'est pas une chaine de caractère !</p>');
+      array_push($_retours, '<p class="inscription-erreur">L\'identifiant n\'est pas une chaine de caractère !</p>');
     }
   }else{
-    array_push($_retours, '<p>L\'identifiant à transmettre n\'existe pas.</p>');
+    array_push($_retours, '<p class="inscription-erreur">L\'identifiant à transmettre n\'existe pas.</p>');
   }
 
     //~
@@ -92,33 +111,33 @@ if(isset($_POST) && count($_POST)){
               $userPasswordValide=password_hash($userPassword, PASSWORD_DEFAULT);
 
             }else{
-              array_push($_retours, '<p>Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;</p>');
+              array_push($_retours, '<p class="inscription-erreur">Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;</p>');
             }
 
           }else{
-            array_push($_retours, '<p>Le mot de passe ne contient pas de lettre en minuscule.</p>');
+            array_push($_retours, '<p class="inscription-erreur">Le mot de passe ne contient pas de lettre en minuscule.</p>');
           }
 
         }else{
-          array_push($_retours, '<p>Le mot de passe ne contient pas de lettre en majuscule.</p>');
+          array_push($_retours, '<p class="inscription-erreur">Le mot de passe ne contient pas de lettre en majuscule.</p>');
         }
       }else{
-        array_push($_retours, '<p>Le mot de passe ne contient pas de chiffre.</p>');
+        array_push($_retours, '<p class="inscription-erreur">Le mot de passe ne contient pas de chiffre.</p>');
       }
     }else{
-      array_push($_retours, '<p>La taille du mot de passe doit être entre 8 et 25 caractères.</p>');
+      array_push($_retours, '<p class="inscription-erreur">La taille du mot de passe doit être entre 8 et 25 caractères.</p>');
     }
 
 
   }else{
-    array_push($_retours, '<p>Le mot de passe à transmettre n\'existe pas.</p>');
+    array_push($_retours, '<p class="inscription-erreur">Le mot de passe à transmettre n\'existe pas.</p>');
   }
 
     //~ On fusionne et affiche les messages de notre tableau en une seule chaine de caractères.
   echo implode("<br>", $_retours);
 
 }else{
-  echo "<p>Aucun paramètre n'a été transmis.</p>";
+  echo "<p class='inscription-erreur'>Aucun paramètre n'a été transmis.</p>";
 }
 
 
@@ -139,7 +158,7 @@ if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
     $requeteVerification->closeCursor();
 
     if($resultatVerification>0){ //si sup à 0 = existence d'une correspondance donc utilisateur déjà inscrit => arrêter script d'insertion avec exit
-    echo'<p>Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.</p>';
+    echo'<p class="inscription-erreur">Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.</p>';
     exit;
     }
 
@@ -153,29 +172,12 @@ if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
     ));
     $requeteInsertion->closeCursor();
 
-}
-
 /***************OUVERTURE DE SESSION***************/
  setConnecte($userIdValide, $userPasswordValide);
 
+}
+
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-      <title>Mon inscription</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../assets/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
-    </head>
-
-    <body>
-      <header class="bandeau ">
-        <?php include('../menu.php'); ?>
-    </header>
 
       <?php if(isConnecte()){
 echo '<br><div class="bienvenue"><p>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.<br></p><a href="../index.php" class="row around">Je trouve mon bonheur !</a></div>';
