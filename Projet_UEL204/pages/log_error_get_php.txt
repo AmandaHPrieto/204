@@ -1854,3 +1854,213 @@ Stack trace:
 [13-Dec-2023 22:37:22 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
 [13-Dec-2023 22:37:22 UTC] PHP Stack trace:
 [13-Dec-2023 22:37:22 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:15:13 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 07:15:13 UTC] PHP Stack trace:
+[14-Dec-2023 07:15:13 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 07:38:46 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 07:38:46 UTC] PHP Stack trace:
+[14-Dec-2023 07:38:46 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:25 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 08:32:25 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:25 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:32:48 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 08:32:48 UTC] PHP Stack trace:
+[14-Dec-2023 08:32:48 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:33:15 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 08:33:15 UTC] PHP Stack trace:
+[14-Dec-2023 08:33:15 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 08:38:38 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 08:38:38 UTC] PHP Stack trace:
+[14-Dec-2023 08:38:38 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 34
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 53
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 117
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  include(inc.functions.php): Failed to open stream: No such file or directory in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  include(): Failed opening 'inc.functions.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 119
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 165
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Undefined array key 0 in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 167
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0
+[14-Dec-2023 09:07:28 UTC] PHP Warning:  Undefined array key "connect" in C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php on line 169
+[14-Dec-2023 09:07:28 UTC] PHP Stack trace:
+[14-Dec-2023 09:07:28 UTC] PHP   1. {main}() C:\wamp64\www\L204\Mini-projet\204\Projet_UEL204\pages\connect.php:0

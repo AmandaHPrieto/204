@@ -33,6 +33,10 @@ ul {
   list-style: none inside none;
 }
 
+p{
+  font-family: var(--tertiary-font);
+}
+
 /*structure*/
 .row {
   display: flex;
@@ -102,7 +106,28 @@ ul {
 }
 
 /*footer*/
+footer{
+  background-color: var(--primary-color);
+  padding: 2.5rem 0rem;
 
+}
+
+#logo-footer{
+  width: 20rem;
+}
+
+.footer-social{
+  font-family: var(--primary-font);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.footer-social p{
+  margin-bottom: 1rem;
+}
+.footer-social a{
+  padding: 2rem 1rem;
+}
 
 
 /*************PAGE RESULTATS*************/
@@ -115,7 +140,6 @@ ul {
   font-family: var(--secondary-font);
   cursor: pointer;
   padding: .5rem 2.5rem;
-  outline: none;
 }
 
 
@@ -182,7 +206,6 @@ padding-right: 2rem;
  background: transparent url(images/photo-bandeau.png) center no-repeat;
  background-size: cover;
  background-position: 60% 10%;
-  background-color: var(--secondary-color);
   padding: 2rem 0rem;
 }
 
@@ -195,10 +218,15 @@ form{
 }
 
 fieldset{
-  border:1px solid red;
+  border: none;
   margin-bottom: 1rem;
 }
 
+::placeholder{
+  color:var(--primary-color);
+  font-size: .7rem;
+  opacity: .6;
+}
 .inscription-form-legend{
   text-align: center;
   font-family: var(--primary-font);
@@ -210,6 +238,8 @@ fieldset{
   padding: .5rem 2rem;
   font-family: var(--secondary-font);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .inscription-form-input{
@@ -230,4 +260,16 @@ color: var(--white-color);
 font-family: var(--tertiary-font);
 font-size: .7rem;
 text-align: center;
+}
+
+.compte-existant {
+  text-align: center;
+  font-family: var(--tertiary-font);
+  font-size: .6rem;
+}
+
+.inscription-effective{
+  font-family: var(--tertiary-font);
+  text-align: center;
+  margin: 4rem 0rem;
 }

@@ -31,16 +31,16 @@ if(isset($_POST) && count($_POST)){
           $emailValide = strip_tags($email);
           //~On prépare le message final si le paramètre est incorrect
         }else{
-          array_push($_retours, 'Votre mail n\'est pas considéré comme valide !');
+          array_push($_retours, '<p>Votre mail n\'est pas considéré comme valide !</p>');
         }
       }else{
-        array_push($_retours, 'Votre mail n\'est pas une chaine de caractère !');
+        array_push($_retours, '<p>Votre mail n\'est pas une chaine de caractère !</p>');
       }
     }else{
-      array_push($_retours, 'Votre mail n\'a pas été renseigné !');
+      array_push($_retours, '<p>Votre mail n\'a pas été renseigné !</p>');
     }
   }else{
-    array_push($_retours, 'La variable à transmettre n\'existe pas.');
+    array_push($_retours, '<p>La variable à transmettre n\'existe pas.</p>');
   }
 
     //~
@@ -59,13 +59,13 @@ if(isset($_POST) && count($_POST)){
         $userIdValide = strip_tags($userId);
         //~On prépare le message final si le paramètre est incorrect
       }else{
-        array_push($_retours, 'La taille de l\'identifiant doit être entre 6 et 20 caractères.');
+        array_push($_retours, '<p>La taille de l\'identifiant doit être entre 6 et 20 caractères.<br></p>');
       }
     }else{
-      array_push($_retours, 'L\'identifiant n\'est pas une chaine de caractère !');
+      array_push($_retours, '<p>L\'identifiant n\'est pas une chaine de caractère !</p>');
     }
   }else{
-    array_push($_retours, 'L\'identifiant à transmettre n\'existe pas.');
+    array_push($_retours, '<p>L\'identifiant à transmettre n\'existe pas.</p>');
   }
 
     //~
@@ -92,26 +92,26 @@ if(isset($_POST) && count($_POST)){
               $userPasswordValide=password_hash($userPassword, PASSWORD_DEFAULT);
 
             }else{
-              array_push($_retours, 'Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;');
+              array_push($_retours, '<p>Le mot de passe ne contient pas un de ces caractères spéciaux:!?+*,@#;</p>');
             }
 
           }else{
-            array_push($_retours, 'Le mot de passe ne contient pas de lettre en minuscule.');
+            array_push($_retours, '<p>Le mot de passe ne contient pas de lettre en minuscule.</p>');
           }
 
         }else{
-          array_push($_retours, 'Le mot de passe ne contient pas de lettre en majuscule.');
+          array_push($_retours, '<p>Le mot de passe ne contient pas de lettre en majuscule.</p>');
         }
       }else{
-        array_push($_retours, 'Le mot de passe ne contient pas de chiffre.');
+        array_push($_retours, '<p>Le mot de passe ne contient pas de chiffre.</p>');
       }
     }else{
-      array_push($_retours, 'La taille du mot de passe doit être entre 8 et 25 caractères.');
+      array_push($_retours, '<p>La taille du mot de passe doit être entre 8 et 25 caractères.</p>');
     }
 
 
   }else{
-    array_push($_retours, 'Le mot de passe à transmettre n\'existe pas.');
+    array_push($_retours, '<p>Le mot de passe à transmettre n\'existe pas.</p>');
   }
 
     //~ On fusionne et affiche les messages de notre tableau en une seule chaine de caractères.
@@ -139,7 +139,7 @@ if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
     $requeteVerification->closeCursor();
 
     if($resultatVerification>0){ //si sup à 0 = existence d'une correspondance donc utilisateur déjà inscrit => arrêter script d'insertion avec exit
-    echo'Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.';
+    echo'<p>Un utilisateur avec cette adresse e-mail est déjà enregistré. Veuillez choisir une adresse e-mail différente ou connectez-vous.</p>';
     exit;
     }
 
@@ -167,14 +167,21 @@ if(isset($emailValide) && isset($userIdValide) && isset($userPasswordValide)){
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
     </head>
 
     <body>
+      <header class="bandeau ">
+        <?php include('../menu.php'); ?>
+    </header>
 
       <?php if(isConnecte()){
-echo '<br>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.<br><a href="../index.php" class="row around">Je trouve mon bonheur !</a>';
+echo '<br><p>Bonjour '. $userIdValide .', bienvenue chez AirPHP ! L\'inscription a été un succès. <br>Explorez notre sélection de biens immobiliers et ajoutez-les à vos favoris pour pouvoir les consultez plus tard.<br></p><a href="../index.php" class="row around">Je trouve mon bonheur !</a>';
 }
       ?>
 
+    <?php include('../footer.php'); ?>
     </body>
 </html>

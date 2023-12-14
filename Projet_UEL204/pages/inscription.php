@@ -25,11 +25,11 @@ include '../inc.functions.php';
 
         <form action="post_inscription.php" method="POST">
                 <fieldset>
-                    <legend class="inscription-form-legend">Inscrivez-vous ! </legend>
+                    <legend class="inscription-form-legend"> Inscrivez-vous ! </legend>
                     
                     <p class="inscription-form-item">
                         <label class="inscription-form-label" for="userMail">Mail</label>
-                        <input class="inscription-form-input" type="email" name="userMail" id="userMail" placeholder="Saisissez votre mail">
+                        <input class="inscription-form-input" type="email" name="userMail" id="userMail" >
                     </p>
                     <p class="inscription-form-item">
                         <label class="inscription-form-label" for="userId">Identifiant</label>
@@ -37,21 +37,19 @@ include '../inc.functions.php';
                     </p>
                     <p class="inscription-form-item">
                         <label class="inscription-form-label" for="userPassword">Mot de passe</label>
-                        <input class="inscription-form-input" type="password" name="userPassword" id="userPassword" >
+                        <input class="inscription-form-input" type="password" name="userPassword" id="userPassword" placeholder="8 caractères minimum" >
                     </p>
                     <p class="inscription-form-item">
                         <input class="inscription-form-submit button" type="submit" value="M'inscrire">
                     </p>                        
                                      
                 </fieldset>
-                 <div id="#compte-existant">
-                <p>Vous avez déjà un compte chez nous ?</p>
-                <a href="#" title="J'accède à la page de connexion.">Se connecter</a>
-            </div>
+                 <div class="compte-existant" >
+                <p >Vous avez déjà un compte chez nous ?</p>
+                <a href="connect.php" title="J'accède à la page de connexion.">Se connecter</a>
+                </div>
 
             </form>
-
-
 
     </section><!-- eof .section-inscription -->
 
@@ -62,8 +60,12 @@ include '../inc.functions.php';
     </div>
     </section>
 
+
     <?php else: ?>
-                Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).
+               <p class="inscription-effective"> Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).</p>
             <?php endif; ?>
+
+        <?php include('../footer.php'); ?>
+
 </body>
 </html>
