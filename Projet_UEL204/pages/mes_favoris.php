@@ -11,8 +11,7 @@
 
     //~ Utilisateur non connecté : on redirige
    if(!isConnecte()){
-        //~ Message de demande de connexion
-    echo("Vous devez vous connecter ou vous inscrire pour accéder à cette page.");
+        //~ Message de demande de connexion (à voir)
        header('Location: connect.php');
     }
 
