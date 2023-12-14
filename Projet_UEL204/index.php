@@ -44,30 +44,29 @@
 
 		</header>
 
-<section>
+		<section class="section-recherche">
 	<h1>AirPHP: les bonnes bases pour votre maison!</h1>
 	<div class="form">
 		<form method="POST" action="index.php">
 			<fieldset>
 		 	 	<legend>Que recherchez vous?</legend>
 			<div class="form-box">
-				<div class="form-top row around">
+				<div class="form-top-line row">
 		  			<div class="form-type row">
-						<div>
-						<label for="cat-maison">Maison<input  class="form-input" type="checkbox" name="categorie[]" id="cat-maison" value="maison"></br></label>
+						<div class="form-item">
+							<label for="cat-maison">Maison<input class="form-input" type="checkbox" name="categorie[]" id="cat-maison" value="maison"></br></label>
 						</div>
-						<div>
-						<label for="cat-appartement">Appartement<input  class="form-input" type="checkbox" name="categorie[]" id="cat-appartement" value="appartement" ></br></label>
+						<div class="form-item">
+							<label for="cat-appartement">Appartement<input class="form-input" type="checkbox" name="categorie[]" id="cat-appartement" value="appartement" ></br></label>
 						</div>
-		  			</div>
-					
-					<div class="form-surface row">
-						<label for="surface">Surface en m2</label>
-						<input class="form-input" type="text" name="surface" id="surface"></br>
 					</div>
-
-					<div class="form-city row">
-						<label for="ville">Saisissez la ville où vous recherchez</label>
+					<div class="form-surface form-item row">
+						<label for="surface">Surface en m2<input class="form-input-small" type="text" name="surface" id="surface"></br></label>
+					</div>
+				</div>
+				<div class="form-mid-line row">
+					<div class="form-city form-item row">
+						<label for="ville">Ville</label>
 							<select class="form-input" id="ville" name="ville">
 								<option value=""></option>
 								<option value="Limoges">Limoges</option>
@@ -80,10 +79,10 @@
 								<option value="Rilhac-Rancon">Rilhac-Rancon</option>
 								<option value="Boisseuil">Boisseuil</option>
 							</select><br>
-						</div>
+					</div>
 
-						<div class="form-budget row">
-							<label for="budget">Votre budget</label>
+					<div class="form-budget form-item row">
+						<label for="budget">Votre budget</label>
 								<select class="form-input" id="budget" name="budget">
 									<option value="">Veuillez indiquer votre budget</option>
 									<option value="100000">100000€</option>
@@ -93,14 +92,15 @@
 									<option value="350000">350000€</option>
 									<option value="500000€">500000€</option>
 								</select><br>
-						</div>
 					</div>
-					<div class=form-bottom >
-						<input type="submit" value="Trouver mon bonheur" class="button">
-					</div>
-				</div>	
-				</fieldset>
-			</form>
+				</div>
+				<div class="form-bottom-line ">
+					<input class="form-input-med justify-center" type="submit" value="Trouver mon bonheur" class="button">
+				</div>
+			</div>	
+			</fieldset>
+		</form>
+	</div>
 		</div>
 </section>
 
