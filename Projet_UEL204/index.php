@@ -46,28 +46,28 @@
 
 		<section class="section-recherche">
 	<h1>AirPHP: les bonnes bases pour votre maison!</h1>
-	<div class="form">
-		<form method="POST" action="index.php">
+	<div class="form ">
+		<form class="form-search" method="POST" action="index.php">
 			<fieldset>
-		 	 	<legend>Que recherchez vous?</legend>
-			<div class="form-box">
-				<div class="form-top-line row">
+		 	 	<legend class="form-legend">Que recherchez vous?</legend>
+			<div class="form-box column align-around">
+				<div class="form-top-line line space align-center row">
 		  			<div class="form-type row">
-						<div class="form-item">
+						<div class="form-item type-item">
 							<label for="cat-maison">Maison<input class="form-input" type="checkbox" name="categorie[]" id="cat-maison" value="maison"></br></label>
 						</div>
-						<div class="form-item">
+						<div class="form-item type-item">
 							<label for="cat-appartement">Appartement<input class="form-input" type="checkbox" name="categorie[]" id="cat-appartement" value="appartement" ></br></label>
 						</div>
 					</div>
 					<div class="form-surface form-item row">
-						<label for="surface">Surface en m2<input class="form-input-small" type="text" name="surface" id="surface"></br></label>
+						<label for="surface">Surface en m2<input class="form-input small" type="text" name="surface" id="surface"></br></label>
 					</div>
 				</div>
-				<div class="form-mid-line row">
-					<div class="form-city form-item row">
-						<label for="ville">Ville</label>
-							<select class="form-input" id="ville" name="ville">
+				<div class="form-mid-line  space line row">
+					<div class="form-city form-item  row">
+						<label for="ville">Ville
+							<select class="form-input med box" id="ville" name="ville">
 								<option value=""></option>
 								<option value="Limoges">Limoges</option>
 								<option value="Panazol">Panazol</option>
@@ -78,24 +78,24 @@
 								<option value="Verneuil-sur-Vienne">Verneuil-sur-Vienne</option>
 								<option value="Rilhac-Rancon">Rilhac-Rancon</option>
 								<option value="Boisseuil">Boisseuil</option>
-							</select><br>
+							</select><br></label>
 					</div>
 
 					<div class="form-budget form-item row">
-						<label for="budget">Votre budget</label>
-								<select class="form-input" id="budget" name="budget">
-									<option value="">Veuillez indiquer votre budget</option>
+						<label for="budget">Budget
+								<select class="form-input med box" id="budget" name="budget">
+									<option value="">Votre budget max?</option>
 									<option value="100000">100000€</option>
 									<option value="150000">150000€</option>
 									<option value="200000">200000€</option>
 									<option value="250000">250000€</option>
 									<option value="350000">350000€</option>
 									<option value="500000€">500000€</option>
-								</select><br>
+								</select><br></label>
 					</div>
 				</div>
-				<div class="form-bottom-line ">
-					<input class="form-input-med justify-center" type="submit" value="Trouver mon bonheur" class="button">
+				<div class="form-bottom-line justify-center line row">
+					<input class="button big" type="submit" value="Trouver votre bonheur">
 				</div>
 			</div>	
 			</fieldset>
