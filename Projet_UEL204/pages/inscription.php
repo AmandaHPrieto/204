@@ -62,7 +62,13 @@ include '../inc.functions.php';
 
 
     <?php else: ?>
+
                <p class="inscription-effective"> Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).</p>
+
+                <p>Bonjour <?php echo $_SESSION['login']; ?>, vous êtes déjà inscrit(e) et connecté(e).</p>
+                <a href="./deconnect.php" title="Deconnexion">Se déconnecter</a>
+                <a href="../index.php" class="row around">Retour à l'accueil</a>
+
             <?php endif; ?>
 
         <?php include('../footer.php'); ?>
