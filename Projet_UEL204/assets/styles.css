@@ -33,6 +33,10 @@ ul {
   list-style: none inside none;
 }
 
+p{
+  font-family: var(--tertiary-font);
+}
+
 /*structure*/
 .row {
   display: flex;
@@ -102,22 +106,47 @@ ul {
 }
 
 /*footer*/
+footer{
+  background-color: var(--primary-color);
+  padding: 2.5rem 0rem;
 
+}
+
+#logo-footer{
+  width: 20rem;
+}
+
+.footer-social{
+  font-family: var(--primary-font);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.footer-social p{
+  margin-bottom: 1rem;
+}
+.footer-social a{
+  padding: 2rem 1rem;
+}
 
 
 /*************PAGE RESULTATS*************/
 /* page résultats */
 .button {
-  border: 3px solid goldenrod;
-  padding: 1rem;
-  width: 5rem;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 2rem;
+  font-family: var(--secondary-font);
+  cursor: pointer;
+  padding: .5rem 2.5rem;
 }
 
 
 
 /*************PAGE RECHERCHE FORMULAIRE*************/
 
-.form {
+/*.form {
 max-width: 75%;
 margin : auto;
 margin-top: 3rem;
@@ -166,9 +195,10 @@ padding-right: 2rem;
   border-radius: 20px;
   background-color:goldenrod;
 
-}
+}*/
 
 /*************PAGE INSCRIPTION*************/
+
 
 
 
@@ -221,3 +251,81 @@ padding-right: 2rem;
 .span-prix{
   color: var(--secondary-color);
 }
+
+
+.section-inscription{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ background: transparent url(images/photo-bandeau.png) center no-repeat;
+ background-size: cover;
+ background-position: 60% 10%;
+  padding: 2rem 0rem;
+}
+
+/*formulaire*/
+form{
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  padding: 2rem 4rem;
+  margin: 3.5rem 0rem;
+}
+
+fieldset{
+  border: none;
+  margin-bottom: 1rem;
+}
+
+::placeholder{
+  color:var(--primary-color);
+  font-size: .7rem;
+  opacity: .6;
+}
+.inscription-form-legend{
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.inscription-form-item{
+  padding: .5rem 2rem;
+  font-family: var(--secondary-font);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.inscription-form-input{
+  border-radius: 2rem;
+  border: .5px solid var(--secondary-color);
+  padding: .5rem 2rem;
+  text-align: center;
+}
+
+.mentions-legales{
+  padding: 1.5rem 0rem;
+  font-style: italic;
+  background-color: var(--secondary-color);
+}
+
+.mentions-legales p{
+color: var(--white-color);
+font-family: var(--tertiary-font);
+font-size: .7rem;
+text-align: center;
+}
+
+.compte-existant {
+  text-align: center;
+  font-family: var(--tertiary-font);
+  font-size: .6rem;
+}
+
+.inscription-effective{
+  font-family: var(--tertiary-font);
+  text-align: center;
+  margin: 4rem 0rem;
+}
+

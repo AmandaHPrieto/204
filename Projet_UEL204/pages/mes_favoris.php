@@ -71,5 +71,6 @@
 
 	</fieldset>
 
+    <?php include('../footer.php'); ?>
     </body>
 </html>

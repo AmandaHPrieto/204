@@ -6,11 +6,11 @@
     include 'inc.connexion.php';
     include '../inc.functions.php';
 
-    
+
 
     //~ Lors de la soumission du formulaire
-    if($_POST 
-        && count($_POST) 
+    if($_POST
+        && count($_POST)
             && array_key_exists('login', $_POST) && array_key_exists('mdp', $_POST)
                 && !empty($_POST['login']) && !empty($_POST['mdp'])){
 
@@ -26,7 +26,7 @@
                     $requete->execute();
                     $row = $requete->fetch(PDO::FETCH_OBJ);
                     $hash = $row->motdepasse;
-                    
+
                     // On compare le mdp entré au mdp hashé
                     if(password_verify($mdp, $hash)){
                         //~ Des données issues d'un formulaire de connexion sont transmises
@@ -39,8 +39,8 @@
     // Fin de parcours de la BDD
     $requete->closeCursor();
     }
-            
-          
+
+
 
 ?>
 <!DOCTYPE html>
@@ -64,17 +64,17 @@
         <h1>AirPHP: On trouve la maison de vos rêves et ce ne sont pas des paroles en l'air!</h1>
         <h2 class="row around">Page de connexion</h2>
         <a href="../index.php" class="row around">Retour à l'accueil</a>
-        
-        
+
+
 
         <?php lireEtSupprimeMessageSession();?>
-            
+
             <?php if(!isConnecte()) : ?>
                 <div id="#compte-existant">
             <p>Vous n'avez pas un compte chez nous ?</p>
             <a href="inscription.php" title="J'accède à la page d'inscription.">S'inscrire</a>
         </div>
-        
+
                 <form method="POST">
                     <div class="row">
                         <div class="col">
@@ -94,10 +94,14 @@
                 </form>
             <?php else: ?>
                 <p>Bonjour <?php echo $_SESSION['login']; ?> !</p>
-                <a href="./deconnect.php" title="Deconnexion">Se déconnecter</a>                                          
-            <?php endif; ?> 
+                <a href="./deconnect.php" title="Deconnexion">Se déconnecter</a>
+            <?php endif; ?>
 
 
+
+        ?>
+
+        <?php include('../footer.php'); ?>
 
     </body>
 </html>
