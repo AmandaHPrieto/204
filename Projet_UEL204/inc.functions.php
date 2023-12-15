@@ -173,7 +173,7 @@ function addFavori(){
 	
 		if(array_key_exists('logement', $_GET) && !empty($_GET['logement'])){
 			$id=$_GET['logement'];
-			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id.'');
+			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id);
 	
 			while ($id = $request->fetch()){
 				$photo=$id['photo'];
@@ -186,10 +186,10 @@ function addFavori(){
 				favorisInSession();
 				addFavoriToSession($photo, $adresse, $ville,$categorie, $surface, $prix);
 			}
+		$requete->closeCursor();
 		}
 	} 
-$requete->closeCursor();	
-}
+};
   /* $file_write='mesfavoris.txt';
     $write=fopen($file_write, 'a');
     foreach ($_SESSION['favoris'] as $_favori)
