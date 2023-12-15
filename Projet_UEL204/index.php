@@ -107,7 +107,7 @@
 <section>
 	<div>
 		<fieldset class="resultats">
-		<legend><strong>Résultats de vos recherches</strong></legend>
+		<legend class="form-legend resultats-titre"><strong>Résultats de vos recherches</strong></legend>
 
 		<?php
 			

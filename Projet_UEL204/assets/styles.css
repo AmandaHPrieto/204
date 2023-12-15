@@ -111,9 +111,9 @@ p{
 .favoris-box {
   border: 3px solid goldenrod;
 }
-.card-fav  {
+/*.card-fav  {
   border : 1px solid goldenrod;
-}
+}*/
 
 /*footer*/
 footer{
@@ -218,20 +218,30 @@ color: var(--primary-color);
 
 
 /*************ZONE RESULTATS SUR PAGE INDEX et PAGE MES FAVORIS*************/
+.resultats-titre{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .resultats{
   margin: 5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex:100% 0 0 ;
-  justify-content: space-between;
+  flex:80% 0 0 ;
+  justify-content: space-around;
 }
 
 .conteneur-maison{
   margin: 1rem;
   display: flex;
-  flex: 45% 0 0;
+  justify-content: center;
+  flex: 40% 0 0;
   align-items: center;
+  padding: 1rem;
+  /*border: 1px solid #140460;*/
+  border-radius: 2rem;
+  background-color: rgb(242, 242, 242);
 }
 
 .img-maison{
