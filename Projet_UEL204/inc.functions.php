@@ -108,7 +108,7 @@ function recherche(){
 	// On rend la variable bdd globale
 	global $bdd;
 	//if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ville'], $_POST['surface'], $_POST['budget'])) à voir si on l'utilise 
-	$requete ='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND surface > "'.$_POST['surface'].'" AND prix < "'.$_POST['budget'].'"'; //visiblement si le input surface n'est pas rempli c'est pas grave pour la recherche??? 
+	$requete ='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND surface > "'.htmlspecialchars($_POST['surface']).'" AND prix < "'.$_POST['budget'].'"'; //visiblement si le input surface n'est pas rempli c'est pas grave pour la recherche??? 
 	$param_categ = ''; //les checkbox porte le meme nom mais une valeur différente (appartement ou maison): leur nom est un déclaré comme un tableau. 
 //ainsi les valeurs cochées seront transmises sous forme de tableau que l'on pourra parcourir pour les récupérer. (super pratique car tu peux avoir autant de valeurs que tu veux! On peut mettre des péniches et des yourtes aussi!)
 		
@@ -180,7 +180,7 @@ function addFavori(){
 				$adresse=$id['adresse'];
 				$ville=$id['ville'];
 				$categorie=$id['categorie'];
-				$surface=$id['surface'];
+				$surface=($id['surface']);
 				$prix=$id['prix'];
 	
 				favorisInSession();
