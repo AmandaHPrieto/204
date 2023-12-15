@@ -52,14 +52,11 @@
                             foreach($_favori as $element) {
                                 echo ''.$element.'</br>';
                             }
-                            
                             echo '</div></div>';
                         }
                      };
                  ?>
                   
-            
-        
         </div>
 
         <fieldset class="fieldset">
