@@ -64,7 +64,7 @@
 
         <fieldset class="fieldset">
 		<form method="post" action="../index.php">
-			<input type="submit" value="Retour à la page d'accueil" >
+			<input type="submit" class="button" value="Retour à la page d'accueil" >
 		</form>
 
 	</fieldset>
