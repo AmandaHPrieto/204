@@ -23,7 +23,11 @@
 	    <title>Mes favoris</title>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Sniglet&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -31,18 +35,18 @@
             <?php include('../menu.php'); ?>
         </header>
 
-        <div class="favoris-box row ">  
+        <div class="row ">
            
-                <img src="../assets/images/favoris.png" width="100px" alt="icone-favoris" class="row" >
+                <img src="../assets/images/favoris.png" width="80rem"  alt="icone-favoris" >
             
-                <h1 class="favoris row">Vos annonces sauvegardées</h1>
+                <h1 class="row">Vos annonces sauvegardées</h1>
                 
         </div>
         <div class="resultats">
                 <?php  
                 
                 if(!favorisInSession()){
-                    echo "Vous n'avez ajouté aucun logement dans vos favoris pour l'instant";
+                    echo "<div class='row column'><p>Vous n'avez ajouté aucun logement dans vos favoris pour l'instant.</p><br><img class='row' width='50' height='50' src='https://img.icons8.com/ios/50/sad.png' alt='sad'/></div>";
                  }
                  else {
                        foreach($_SESSION['favoris'] as $_favori){ 

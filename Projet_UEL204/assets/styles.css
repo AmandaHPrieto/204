@@ -39,9 +39,19 @@ p{
   font-family: var(--tertiary-font);
 }
 
+.button {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 2rem;
+  font-family: var(--secondary-font);
+  cursor: pointer;
+  padding: .5rem 2.5rem;
+}
+
+
+
 /*structure*/ 
-
-
 
 .row {
   display: flex;
@@ -109,14 +119,10 @@ p{
 }
 
 
-/*favoris*/ 
+/*favoris*/
+.image-favoris{
 
-.favoris-box {
-  border: 3px solid goldenrod;
 }
-/*.card-fav  {
-  border : 1px solid goldenrod;
-}*/
 
 /*footer*/
 footer{
@@ -141,19 +147,6 @@ footer{
 }
 .footer-social a{
   padding: 2rem 1rem;
-}
-
-
-/*************PAGE RESULTATS*************/
-/* page résultats */
-.button {
-  color: var(--white-color);
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: 2rem;
-  font-family: var(--secondary-font);
-  cursor: pointer;
-  padding: .5rem 2.5rem;
 }
 
 /*************PAGE RECHERCHE FORMULAIRE*************/
@@ -221,6 +214,7 @@ color: var(--primary-color);
 
 
 /*************ZONE RESULTATS SUR PAGE INDEX et PAGE MES FAVORIS*************/
+
 .resultats-titre{
   margin-left: auto;
   margin-right: auto;
@@ -280,6 +274,10 @@ color: var(--primary-color);
   color: var(--secondary-color);
 }
 
+/*************PAGE MES FAVORIS*************/
+.column{
+  flex-direction: column;
+}
 
 
 

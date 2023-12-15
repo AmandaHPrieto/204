@@ -195,7 +195,7 @@ function addFavori(){
 	if($_GET && count($_GET)){
 		if(array_key_exists('logement', $_GET) && !empty($_GET['logement'])){
 			$id=$_GET['logement'];
-			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id.'');
+			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id);
 	
 			while ($id = $request->fetch()){
 				$photo=$id['photo'];
@@ -208,10 +208,23 @@ function addFavori(){
 			}
 			
 				favorisInSession();
-				addFavoriToSession($photo, $adresse, $ville, $categorie, $surface, $prix);			
-		
-} 
-	$requete->closeCursor();	
-}
-}
+				addFavoriToSession($photo, $adresse, $ville,$categorie, $surface, $prix);
+			}
+		}
+	} 
+$requete->closeCursor();	
+
+  /* $file_write='mesfavoris.txt';
+    $write=fopen($file_write, 'a');
+    foreach ($_SESSION['favoris'] as $_favori)
+        {
+        file_put_contents($file_write, $_favori PHP_EOL, FILE_APPEND);
+        }
+     fclose($write);
+                    
+    $_file_read='mesfavoris.txt';
+    $read=fopen($file_read,'r');
+     $text= file_get_contents('mesfavoris.txt');
+    echo $text;*/
+
 ?>
