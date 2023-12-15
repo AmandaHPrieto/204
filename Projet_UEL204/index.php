@@ -67,7 +67,7 @@
 				<div class="form-mid-line  space line row">
 					<div class="form-city form-item  row">
 						<label for="ville">Ville
-							<select class="form-input med box" id="ville" name="ville">
+							<select class="form-input med box" id="ville" name="ville" required>
 								<option value=""></option>
 								<option value="Limoges">Limoges</option>
 								<option value="Panazol">Panazol</option>
@@ -83,7 +83,7 @@
 
 					<div class="form-budget form-item row">
 						<label for="budget">Budget
-								<select class="form-input med box" id="budget" name="budget">
+								<select class="form-input med box" id="budget" name="budget" required>
 									<option value="">Votre budget max?</option>
 									<option value="100000">100000€</option>
 									<option value="150000">150000€</option>
