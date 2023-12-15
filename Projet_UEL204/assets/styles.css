@@ -39,13 +39,16 @@ p{
   font-family: var(--tertiary-font);
 }
 
-/*structure*/
+/*structure*/ 
+
+
+
 .row {
   display: flex;
-  flex-direction: row; 
- /* max-width: 80rem; /* revoir l'attribution de param autre que le flex sur row...*/
- /* margin-left: auto;
-  margin-right: auto;*/
+  flex-direction: row;   
+  max-width: 80rem; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .around {
