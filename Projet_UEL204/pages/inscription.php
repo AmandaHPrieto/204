@@ -9,6 +9,7 @@ include '../inc.functions.php';
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Page d'inscription</title>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../assets/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
