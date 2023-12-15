@@ -210,9 +210,10 @@ function addFavori(){
 				favorisInSession();
 				addFavoriToSession($photo, $adresse, $ville,$categorie, $surface, $prix);
 			}
+		$requete->closeCursor();
 		}
 	} 
-$requete->closeCursor();	
+;
 
   /* $file_write='mesfavoris.txt';
     $write=fopen($file_write, 'a');
