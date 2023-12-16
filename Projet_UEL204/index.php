@@ -45,7 +45,7 @@
 		</header>
 
 <section class="section-recherche">
-	<h1>AirPHP: les bonnes bases pour votre maison!</h1>
+	<h1>Les bonnes bases pour votre maison!</h1>
 	<div class="form ">
 		<form class="form-search" method="POST" action="index.php">
 			<fieldset>
