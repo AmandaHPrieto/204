@@ -61,7 +61,7 @@
 						</div>
 					</div>
 					<div class="form-surface form-item row">
-						<label for="surface">Surface en m2<input class="form-input small" type="text" name="surface" id="surface"><br></label>
+						<label for="surface">Surface en m2<input class="form-input small" type="text" name="surface" id="surface" required><br></label>
 					</div>
 				</div>
 				<div class="form-mid-line  space line row">
@@ -105,8 +105,7 @@
 
 <section>
 	<div>
-		<fieldset class="resultats">
-		<legend class="form-legend resultats-titre"><strong> Résultats de vos recherches</strong></legend>
+		
 
 		<?php
 			recherche();

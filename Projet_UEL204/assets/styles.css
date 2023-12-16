@@ -49,6 +49,10 @@ p{
   padding: .5rem 2.5rem;
 }
 
+body {
+  font-family: var(--secondary-font);
+}
+
 
 
 /*structure*/ 
@@ -409,11 +413,6 @@ text-align: center;
 
 /* Page connect
 ********************************/
-
-.h1-connect {
-  font-family: var(--primary-font);
-  color: var(--primary-color);
-}
 
 .h2-connect {
   font-family: var(--secondary-font);

@@ -66,7 +66,7 @@
 
             <?php if(!isConnecte()) : ?>
 
-                <h1 class="h1-connect">On trouve la maison de vos rêves</h1>
+                <h1>On trouve la maison de vos rêves</h1>
                 <h2 class="h2-connect"> Et ce ne sont pas des paroles en l'air</h2>
 
 

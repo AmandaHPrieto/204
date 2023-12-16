@@ -35,7 +35,7 @@
 			);
 
 array_push($_SESSION['favoris'], $_favori);	
-	echo" logement a bien été ajouté à vos favoris";	
+	echo" Le logement a bien été ajouté à vos favoris";	
 		}
 		
 
@@ -128,6 +128,7 @@ array_push($_SESSION['favoris'], $_favori);
 			&&  !empty($_POST['ville'])
 					&& !empty($_POST['budget'])
 							&& is_numeric($_POST['surface'])) {
+								echo "<fieldset class=\"resultats\"><legend class=\"form-legend resultats-titre\"><strong> Résultats de vos recherches</strong></legend>";
 	
 			$requete ='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND surface > "'.$_POST['surface'].'" AND prix < "'.$_POST['budget'].'"'; //visiblement si le input surface n'est pas rempli c'est pas grave pour la recherche??? 
 			$param_categ = ''; 	//les checkbox porte le meme nom mais une valeur différente (appartement ou maison): leur nom est un déclaré comme un tableau. 
