@@ -118,8 +118,7 @@ body {
 }
 
 .bandeau a:hover {
-  border: 1px solid var(--secondary-color);
-  border-radius: 2rem
+  text-decoration: underline 2px solid var(--secondary-color);
 }
 
 
