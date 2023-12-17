@@ -18,14 +18,11 @@
 	/* fonction permettant de créer une boite à favoris si elle n'existe pas déjà et d'ajouter un logement dedasn*/ 
 
 
-	function addFavoriToSession($photo, $adresse, $ville, $categorie, $surface, $prix  ){
-
+	function addFavoriToSession($ref, $photo, $adresse, $ville, $categorie, $surface, $prix  ){	
 		if(!favorisInSession()){
 			$_SESSION['favoris']=array();
-		}
-
-		
 			$_favori = array(	
+				'référence' => ('<span>réf: '.$ref.'</span>'),
 				'photo' => ('<img class="img-maison" src="../assets/photos/'.$photo.'">'),
 				'adresse' =>	($adresse),
 				'ville' =>	('<span class="span-ville">'.$ville.'</span>'),
@@ -33,11 +30,33 @@
 				'surface'=> ('<span class="span-surface">'.$surface.'</span>'),
 				'prix'  =>	('<span class="span-prix">'.$prix.'</span>')
 			);
-
-array_push($_SESSION['favoris'], $_favori);	
-	echo" Le logement a bien été ajouté à vos favoris";	
+		array_push($_SESSION['favoris'], $_favori);
+		echo" Le logement a bien été ajouté à vos favoris";
 		}
-		
+
+	else {$_favori = array(	
+	'référence' => ('<span>réf: '.$ref.'</span>'),
+	'photo' => ('<img class="img-maison" src="../assets/photos/'.$photo.'">'),
+	'adresse' =>	($adresse),
+	'ville' =>	('<span class="span-ville">'.$ville.'</span>'),
+	'categorie' =>	('<span class="span-categorie">'.$categorie.'</span>'),
+	'surface'=> ('<span class="span-surface">'.$surface.'</span>'),
+	'prix'  =>	('<span class="span-prix">'.$prix.'</span>')
+);
+array_push($_SESSION['favoris'], $_favori);	
+echo" Le logement a bien été ajouté à vos favoris";	};	
+
+
+if(favorisInSession() && in_array($ref, $_SESSION['favoris'])) { ///Je pense que le probleme est que je n'arrive pas à cibler le bon tableau... 
+	exit ("le logement fait déjà partie de vos favoris");
+}
+
+else {	
+	echo 'Et non ya pas la"'.$ref.'"';
+}
+	};
+
+
 
 		
 	
@@ -158,6 +177,7 @@ array_push($_SESSION['favoris'], $_favori);
 				if (isConnecte()){
 					echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
 				}
+				$ref='<span>La référence est "'.$logement['id'].'"</span>';
 				$photo='<img class="img-maison" src="assets/photos/'.$logement['photo'].'">';
 				$adresse=$logement['adresse'];
 				$ville='<span class="span-ville">'.$logement['ville'].'</span>';
@@ -166,8 +186,8 @@ array_push($_SESSION['favoris'], $_favori);
 				$prix='<span class="span-prix">'.$logement['prix'].' €</span>';
 				$logement=array();
 				$logements=array();
-				array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.$prix);
-				array_push($logements, $logement);	
+				array_push($logement,  $id, $photo, $adresse, $ville, $categorie,''.$surface.$prix);
+				array_push($logements, $id, $logement);	
 			}
 			echo '<div class="conteneur-infos-maison">';
 
@@ -192,13 +212,13 @@ function message($message){
 function addFavori(){ 
 	// On rend la variable bdd globale
 	global $bdd;
-	
 	if($_GET && count($_GET)){
 		if(array_key_exists('logement', $_GET) && !empty($_GET['logement'])){
 			$id=$_GET['logement'];
 			$request =$bdd->query('SELECT * FROM logements WHERE id='.$id);
 	
 			while ($id = $request->fetch()){
+				$ref=$id['id'];
 				$photo=$id['photo'];
 				$adresse=$id['adresse'];
 				$ville=$id['ville'];
@@ -208,8 +228,8 @@ function addFavori(){
 		
 			}
 			
-				favorisInSession();
-				addFavoriToSession($photo, $adresse, $ville,$categorie, $surface, $prix);
+			
+				addFavoriToSession($ref, $photo, $adresse, $ville,$categorie, $surface, $prix);
 			}
 		$requete->closeCursor();
 		}
