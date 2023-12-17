@@ -37,18 +37,6 @@
 array_push($_SESSION['favoris'], $_favori);	
 	echo" Le logement a bien été ajouté à vos favoris";	
 		}
-		
-
-		
-	
-	
-			
-					
-				
-
-
-		
-	
 	
 	
 	/*
@@ -122,67 +110,99 @@ array_push($_SESSION['favoris'], $_favori);
 
 // Fonction pour afficher les résultats d'une recherche
 	function recherche(){
-	// On rend la variable bdd globale
-	global $bdd;
-		if ($_SERVER['REQUEST_METHOD'] === 'POST'
-			&&  !empty($_POST['ville'])
-					&& !empty($_POST['budget'])
-							&& is_numeric($_POST['surface'])) {
-								echo "<fieldset class=\"resultats\"><legend class=\"form-legend resultats-titre\"><strong> Résultats de vos recherches</strong></legend>";
-	
-			$requete ='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND surface > "'.$_POST['surface'].'" AND prix < "'.$_POST['budget'].'"'; //visiblement si le input surface n'est pas rempli c'est pas grave pour la recherche??? 
-			$param_categ = ''; 	//les checkbox porte le meme nom mais une valeur différente (appartement ou maison): leur nom est un déclaré comme un tableau. 
-								//ainsi les valeurs cochées seront transmises sous forme de tableau que l'on pourra parcourir pour les récupérer. (super pratique car tu peux avoir autant de valeurs que tu veux! On peut mettre des péniches et des yourtes aussi!)
-		
-			foreach($_POST['categorie'] as $valeur ) { //on parcourt les valeurs de notre tableau de retours checkbox.
-			$param_categ .= 'categorie="'.$valeur.'" OR '; 
+		global $bdd;
+			if ($_SERVER['REQUEST_METHOD'] === 'POST'
+				&& !empty($_POST['ville'])
+					&& empty($_POST['surface'])
+			 	 	 	&& empty($_POST['budget'])){
+						$requete='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'"';
 			}
-			
-			if($param_categ != '' ) {
-			$requete .= ' AND ('.substr($param_categ, 0, -4).')'; // on retire le OR qui va s'ajouter à la fin de la boucle
-		}
+			else if ($_SERVER['REQUEST_METHOD'] === 'POST'
+						&& empty($_POST['ville'])
+							&& empty($_POST['surface'])
+								&& !empty($_POST['budget'])){
+					$requete='SELECT * FROM logements WHERE prix < "'.$_POST['budget'].'"';
+			}
+			else if ($_SERVER['REQUEST_METHOD'] === 'POST'
+						&& empty($_POST['ville'])
+							&& !empty($_POST['surface']) 
+								&& is_numeric($_POST['surface'])
+									&& empty($_POST['budget'])) {
+					$requete='SELECT * FROM logements WHERE surface > "'.$_POST['surface'].'"';
+			}
+
+			else if ($_SERVER['REQUEST_METHOD'] === 'POST'
+						&&!empty($_POST['ville'])
+							&& empty($_POST['surface'])
+									&& !empty($_POST['budget'])) {
+					$requete='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND prix < "'.$_POST['budget'].'"';
+			}
+
+			else if ($_SERVER['REQUEST_METHOD'] === 'POST'
+						&& !empty($_POST['ville'])
+							&& !empty($_POST['surface'])
+								&& is_numeric($_POST['surface'])) {
+					$requete='SELECT * FROM logements WHERE ville="'.$_POST['ville'].'" AND surface > "'.$_POST['surface'].'"';	
+			}
+			else if ($_SERVER['REQUEST_METHOD'] === 'POST'
+						&& empty($_POST['ville'])
+							&&!empty($_POST['surface'])
+								&& is_numeric($_POST['surface'])
+										&& !empty($_POST['budget'])) {
+					$requete='SELECT * FROM logements WHERE surface >"'.$_POST['surface'].'" AND prix < "'.$_POST['budget'].'"';	
+					
+			} 
+
+			$param_categ = ''; 
+				foreach($_POST['categorie'] as $valeur ) { //on parcourt les valeurs de notre tableau de retours checkbox.
+				$param_categ .= 'categorie="'.$valeur.'" OR '; 
+				}
+				
+				if($param_categ != '' ) {
+				$requete .= ' AND ('.substr($param_categ, 0, -4).')'; // on retire le OR qui va s'ajouter à la fin de la boucle
+				}
 
 			$requete=$bdd->prepare($requete);
 			$requete->execute();
-
-		while ($logement = $requete->fetch()){
-			if (!$logement) // On teste si la réponse à la requête est vide.
-			{
-				echo 'La BDD n\'existe pas ou est vide.';
-				break;
-			}
-			else
-			{
-				echo '<div class="conteneur-maison">';
-				/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
-				if (isConnecte()){
-					echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
-				}
-				$photo='<img class="img-maison" src="assets/photos/'.$logement['photo'].'">';
-				$adresse=$logement['adresse'];
-				$ville='<span class="span-ville">'.$logement['ville'].'</span>';
-				$categorie='<span class="span-categorie">'.$logement['categorie'].'</span>';
-				$surface='<span class="span-surface">'.$logement['surface'].' m2</span>';
-				$prix='<span class="span-prix">'.$logement['prix'].' €</span>';
-				$logement=array();
-				$logements=array();
-				array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.$prix);
-				array_push($logements, $logement);	
-			}
-			echo '<div class="conteneur-infos-maison">';
-
-			foreach($logements as $logement) {
 				
-					foreach($logement as $element) {
-						echo ''.$element.' </br>';
-					}	
+						while ($logement = $requete->fetch()){
+							if (!$logement) // On teste si la réponse à la requête est vide.
+							{
+								echo 'La BDD n\'existe pas ou est vide.';
+								break;
+							}
+							else
+							{
+								echo '<div class="conteneur-maison">';
+								/*si l'utilisateur est connecté, un coeur apparaît et peut ajouter un logement à ses favoris*/
+								if (isConnecte()){
+									echo '<a href="?logement='.$logement['id'].'"><img src="./assets/images/favoris.png" width="30px" alt="favoris "></a>'; /*attention ici lien pour récupérer les données de chaque logement à l'ajout aux favoris */
+								}
+								$photo='<img class="img-maison" src="assets/photos/'.$logement['photo'].'">';
+								$adresse=$logement['adresse'];
+								$ville='<span class="span-ville">'.$logement['ville'].'</span>';
+								$categorie='<span class="span-categorie">'.$logement['categorie'].'</span>';
+								$surface='<span class="span-surface">'.$logement['surface'].' m2</span>';
+								$prix='<span class="span-prix">'.$logement['prix'].' €</span>';
+								$logement=array();
+								$logements=array();
+								array_push($logement,  $photo, $adresse, $ville, $categorie,''.$surface.$prix);
+								array_push($logements, $logement);	
+							}
+							echo '<div class="conteneur-infos-maison">';
 				
-			}
-			echo '</div></div>';
-		}
-	$requete->closeCursor();	
-}
-};
+							foreach($logements as $logement) {
+								
+									foreach($logement as $element) {
+										echo ''.$element.' </br>';
+									}	
+								
+							}
+							}
+		$requete->closeCursor();	
+
+		};
+
 
 
 function message($message){
